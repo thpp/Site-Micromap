@@ -87,7 +87,7 @@ $(document).ready(function() {
     Google maps
 */
 jQuery(document).ready(function() {
-    var position = new google.maps.LatLng(45.067883, 7.687231);
+    var position = new google.maps.LatLng(-22.9040493, -49.6275089);
     $('.map').gmap({'center': position,'zoom': 15, 'disableDefaultUI':true, 'callback': function() {
             var self = this;
             self.addMarker({'position': this.get('map').getCenter() });	
