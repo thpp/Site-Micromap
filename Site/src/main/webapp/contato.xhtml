@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+
+	<ui:composition template="template_principal.xhtml">
+
+		<ui:define name="content">
+
+			<!-- Page Title -->
+			<div class="page-title">
+				<div class="container">
+					<div class="row">
+						<div class="span12">
+							<i class="icon-envelope-alt page-title-icon"></i>
+							<h2>Contato/</h2>
+							<p>Fale conosco</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Contact Us -->
+			<div class="contact-us container">
+				<div class="row">
+					<div class="contact-form span7">
+						<p>Informe seus dados abaixo e envie uma mensagem solicitando
+							informações ou novidades da Micromap Informática.</p>
+						<form method="post" action="assets/sendmail.php">
+							<label for="name" class="nameLabel">Nome</label> <input id="name"
+								type="text" name="name" placeholder="Digite seu nome..."/><label
+								for="email" class="emailLabel">Email</label> <input id="email"
+								type="text" name="email" placeholder="Digite seu email..."/><label
+								for="subject">Subject</label> <input id="subject" type="text"
+								name="subject" placeholder="Digite o assunto..."/><label
+								for="message" class="messageLabel">Mensagem</label>
+							<textarea id="message" name="message"
+								placeholder="Sua Mensagem..."></textarea>
+							<button type="submit">Enviar</button>
+						</form>
+					</div>
+					<div class="contact-address span5">
+						<h4>Localização</h4>
+						<div class="map"></div>
+						<h4>Endereço</h4>
+						<p>
+							Rua Conselheiro Dantas, 421, Centro.<br/> Santa Cruz do Rio
+								Pardo-SP
+						</p>
+						<p>Telefone: (14) 3332-2355</p>
+					</div>
+				</div>
+			</div>
+
+		</ui:define>
+
+	</ui:composition>
+
+</h:body>
+
+</html>
+
