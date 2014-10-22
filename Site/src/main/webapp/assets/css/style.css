@@ -1138,4 +1138,13 @@ ul.portfolio-img li {
 
 }
 
+.botaoEnviar:hover {
+	color: #003966;
+	background-color: #cccccc;
+	border-color: #013968;
+}
 
+.botaoEnviar:active {
+	color: black;
+	border-color: black !important;
+}

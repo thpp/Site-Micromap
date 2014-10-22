@@ -30,18 +30,26 @@
 					<div class="contact-form span7">
 						<p>Informe seus dados abaixo e envie uma mensagem solicitando
 							informações ou novidades da Micromap Informática.</p>
-						<form method="post" action="assets/sendmail.php">
-							<label for="name" class="nameLabel">Nome</label> <input id="name"
-								type="text" name="name" placeholder="Digite seu nome..."/><label
-								for="email" class="emailLabel">Email</label> <input id="email"
-								type="text" name="email" placeholder="Digite seu email..."/><label
-								for="subject">Subject</label> <input id="subject" type="text"
-								name="subject" placeholder="Digite o assunto..."/><label
-								for="message" class="messageLabel">Mensagem</label>
-							<textarea id="message" name="message"
-								placeholder="Sua Mensagem..."></textarea>
-							<button type="submit">Enviar</button>
-						</form>
+						<h:form id="frmContato">
+						
+							<label for="name" class="nameLabel">Nome</label>
+							<h:inputText id="name" name="name" value="Digite seu nome..."
+								onclick="this.value = ''" onblur="if(this.value == '') this.value = 'Digite seu nome...'"/>
+								
+							<label for="email" class="emailLabel">Email</label>
+							<h:inputText id="email" name="email" value="Digite seu email..."
+								onclick="this.value = ''" onblur="if(this.value == '') this.value = 'Digite seu email...'"/>
+							
+							<label for="subject">Assunto</label>
+							<h:inputText id="assunto" name="assunto" value="Digite o assunto..."
+								onclick="this.value = ''" onblur="if(this.value == '') this.value = 'Digite o assunto...'"/>
+							
+							<label for="message" class="messageLabel">Mensagem</label>
+							<h:inputTextarea id="message" name="message" value="Sua Mensagem..." style="resize: none;"
+								onclick="this.value = ''" onblur="if(this.value == '') this.value = 'Sua Mensagem...'"/>
+								
+							<h:commandButton class="botaoEnviar" value="Enviar" style="font-weight: bolder; width: 15em; float: left;"/>
+						</h:form>
 					</div>
 					<div class="contact-address span5">
 						<h4>Localização</h4>
