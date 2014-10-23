@@ -9,6 +9,44 @@
 
 	<ui:composition template="template_principal.xhtml">
 
+		<ui:define name="topo">
+			<!-- Header -->
+			<div class="container">
+				<div class="header row">
+					<div class="span12">
+						<div class="navbar">
+							<div class="navbar-inner">
+								<a class="btn btn-navbar" data-toggle="collapse"
+									data-target=".nav-collapse"> <span class="icon-bar"></span>
+									<span class="icon-bar"></span> <span class="icon-bar"></span>
+								</a>
+								<h1>
+									<a class="brand" href="index.xhtml">Micromap - Soluções em
+										Informática</a>
+								</h1>
+								<div id="menu" class="nav-collapse collapse">
+									<ul id="mmm" class="nav pull-right">
+										<li id="item1"><a href="index.xhtml"><i
+												class="icon-home"></i><br />Home</a></li>
+										<li id="item2"><a href="solucoes.xhtml"><i
+												class="icon-cogs"></i><br />Soluções</a></li>
+										<li id="item3"><a href="#"><i
+												class="icon-shopping-cart"></i><br />Loja</a></li>
+										<li id="item4"><a href="assistencia.xhtml"><i
+												class="icon-wrench"></i><br />Assistência</a></li>
+										<li id="item5"><a href="empresa.xhtml"><i
+												class="icon-sitemap"></i><br />Empresa</a></li>
+										<li class="current-page" id="item6"><a href="contato.xhtml"><i
+												class="icon-envelope-alt"></i><br />Contato</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ui:define>
+
 		<ui:define name="content">
 
 			<!-- Page Title -->
@@ -31,24 +69,30 @@
 						<p>Informe seus dados abaixo e envie uma mensagem solicitando
 							informações ou novidades da Micromap Informática.</p>
 						<h:form id="frmContato">
-						
+
 							<label for="name" class="nameLabel">Nome</label>
 							<h:inputText id="name" name="name" value="Digite seu nome..."
-								onclick="this.value = ''" onblur="if(this.value == '') this.value = 'Digite seu nome...'"/>
-								
+								onclick="this.value = ''"
+								onblur="if(this.value == '') this.value = 'Digite seu nome...'" />
+
 							<label for="email" class="emailLabel">Email</label>
 							<h:inputText id="email" name="email" value="Digite seu email..."
-								onclick="this.value = ''" onblur="if(this.value == '') this.value = 'Digite seu email...'"/>
-							
+								onclick="this.value = ''"
+								onblur="if(this.value == '') this.value = 'Digite seu email...'" />
+
 							<label for="subject">Assunto</label>
-							<h:inputText id="assunto" name="assunto" value="Digite o assunto..."
-								onclick="this.value = ''" onblur="if(this.value == '') this.value = 'Digite o assunto...'"/>
-							
+							<h:inputText id="assunto" name="assunto"
+								value="Digite o assunto..." onclick="this.value = ''"
+								onblur="if(this.value == '') this.value = 'Digite o assunto...'" />
+
 							<label for="message" class="messageLabel">Mensagem</label>
-							<h:inputTextarea id="message" name="message" value="Sua Mensagem..." style="resize: none;"
-								onclick="this.value = ''" onblur="if(this.value == '') this.value = 'Sua Mensagem...'"/>
-								
-							<h:commandButton class="botaoEnviar" value="Enviar" style="font-weight: bolder; width: 15em; float: left;"/>
+							<h:inputTextarea id="message" name="message"
+								value="Sua Mensagem..." style="resize: none;"
+								onclick="this.value = ''"
+								onblur="if(this.value == '') this.value = 'Sua Mensagem...'" />
+
+							<h:commandButton class="botaoEnviar" value="Enviar"
+								style="font-weight: bolder; width: 15em; float: left;" />
 						</h:form>
 					</div>
 					<div class="contact-address span5">
@@ -56,8 +100,8 @@
 						<div class="map"></div>
 						<h4>Endereço</h4>
 						<p>
-							Rua Conselheiro Dantas, 421, Centro.<br/> Santa Cruz do Rio
-								Pardo-SP
+							Rua Conselheiro Dantas, 421, Centro.<br /> Santa Cruz do Rio
+							Pardo-SP
 						</p>
 						<p>Telefone: (14) 3332-2355</p>
 					</div>
