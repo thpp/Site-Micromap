@@ -1,0 +1,12 @@
+.ui-panel-content {
+	background: #f3f3f3 !important;
+	cursor: pointer;
+}
+
+.ui-panel-title, .ui-panel-titlebar {
+	background: #003966 !important;
+	color: white !important;
+	text-shadow: none !important;
+	font-size: 20px !important;
+	cursor: pointer;
+}

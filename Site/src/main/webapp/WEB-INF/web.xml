@@ -9,7 +9,7 @@
 	
 	<!-- Arquivo Inicial -->
 	<welcome-file-list>
-		<welcome-file>index.xhtml</welcome-file>
+		<welcome-file>apresentacao.xhtml</welcome-file>
 	</welcome-file-list>
 	
 	<!-- Fase do Projeto -->
