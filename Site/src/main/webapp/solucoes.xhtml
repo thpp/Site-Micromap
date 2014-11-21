@@ -14,44 +14,6 @@ and open the template in the editor.
 
 	<ui:composition template="template_principal.xhtml">
 
-		<ui:define name="topo">
-			<!-- Header -->
-			<div class="container">
-				<div class="header row">
-					<div class="span12">
-						<div class="navbar">
-							<div class="navbar-inner">
-								<a class="btn btn-navbar" data-toggle="collapse"
-									data-target=".nav-collapse"> <span class="icon-bar"></span>
-									<span class="icon-bar"></span> <span class="icon-bar"></span>
-								</a>
-								<h1>
-									<a class="brand" href="index.xhtml">Micromap - Soluções em
-										Informática</a>
-								</h1>
-								<div id="menu" class="nav-collapse collapse">
-									<ul id="mmm" class="nav pull-right">
-										<li id="item1"><a href="index.xhtml"><i
-												class="icon-home"></i><br />Home</a></li>
-										<li class="current-page" id="item2"><a href="solucoes.xhtml"><i
-												class="icon-cogs"></i><br />Soluções</a></li>
-										<li id="item3"><a href="#"><i
-												class="icon-shopping-cart"></i><br />Loja</a></li>
-										<li id="item4"><a href="assistencia.xhtml"><i
-												class="icon-wrench"></i><br />Assistência</a></li>
-										<li id="item5"><a href="empresa.xhtml"><i
-												class="icon-sitemap"></i><br />Empresa</a></li>
-										<li id="item6"><a href="contato.xhtml"><i
-												class="icon-envelope-alt"></i><br />Contato</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</ui:define>
-
 		<ui:define name="content">
 
 			<!-- Page Title -->
@@ -67,143 +29,171 @@ and open the template in the editor.
 				</div>
 			</div>
 
-			<!-- Portfolio -->
-			<div class="portfolio portfolio-page container">
-				<div class="row">
-					<div class="portfolio-navigator span12">
-						<h4 class="filter-portfolio">
-							<a class="all" id="active-imgs" href="#">Todos</a> / <a
-								class="publico" id="" href="#">Público</a> / <a class="privado"
-								id="" href="#">Privado</a>
-						</h4>
+			<h:panelGroup
+				rendered="#{MBTemplate.indexAtual == '/index_publico.xhtml'}">
+				<!-- Portfolio -->
+				<div class="portfolio portfolio-page container">
+					<div class="row">
+						<div class="portfolio-navigator span12">
+							<h4 class="filter-portfolio">
+								<a class="all" id="active-imgs" href="#">Todos</a> / <a
+									class="sistemas" id="" href="#">Sistemas</a> / <a
+									class="portais" id="" href="#">Portais</a>
+							</h4>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="portfolio-img">
+							<li data-id="p-1" data-type="sistemas" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/gemmap_adm.png" alt="" />
+									<h4>GemMap - Gestão Municipal</h4>
+									<p>Sistema que permite controlar todas os setores da
+										Administração Pública</p>
+								</div>
+							</li>
+							<li data-id="p-3" data-type="portais" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/portal_contribuinte.png" alt="" />
+									<h4>Portal do Contribuinte</h4>
+									<p>Fornece a todo cidadão uma maneira prática para emissão
+										de Certidões, Segunda Via de Carnês...</p>
+								</div>
+							</li>
+							<li data-id="p-4" data-type="sistemas" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/gemmap_saude.png" alt="" />
+									<h4>GemMap - Saúde</h4>
+									<p>Sistema de gerenciamento de postos de saúde, desde o
+										cadastro do paciente</p>
+								</div>
+							</li>
+							<li data-id="p-5" data-type="portais" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/portal_transparencia.png" alt="" />
+									<h4>Portal da Transparência</h4>
+									<p>Serviço com acesso aberto a todos, onde estão
+										disponíveis as receitas e despesas da Prefeitura</p>
+								</div>
+							</li>
+							<li data-id="p-2" data-type="sistemas" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/iss_map.png" alt="" />
+									<h4>ISS Map</h4>
+									<p>Sistema de Emissão de Nota Fiscal Eletrônica de Serviço</p>
+								</div>
+							</li>
+							<li data-id="p-6" data-type="portais" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/processo_legislativo.png" alt="" />
+									<h4>Processo Legislativo</h4>
+									<p>Apoia as Casas Legislativas nas suas atividades de
+										transparência (como Comissões e Mesa Diretora)</p>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="row">
-					<ul class="portfolio-img">
-						<li data-id="p-1" data-type="publico" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/gemmap_adm.png" alt="" />
-								<h4>GemMap - Gestão Municipal</h4>
-								<p>Sistema que permite controlar todas os setores da
-									Administração Pública</p>
-							</div>
-						</li>
-						<li data-id="p-2" data-type="publico" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/iss_map.png" alt="" />
-								<h4>ISS Map</h4>
-								<p>Sistema de Emissão de Nota Fiscal Eletrônica de Serviço</p>
-							</div>
-						</li>
-						<li data-id="p-3" data-type="privado" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/ativo_fixo.jpg" alt="" />
-								<h4>Ativo Fixo</h4>
-								<p>Cadastro de bens, correções, depreciações e integração
-									com a Contabilidade Gerencial</p>
-							</div>
-						</li>
-						<li data-id="p-4" data-type="publico" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/portal_contribuinte.png" alt="" />
-								<h4>Portal do Contribuinte</h4>
-								<p>Fornece a todo cidadão uma maneira prática para emissão
-									de Certidões, Segunda Via de Carnês...</p>
-							</div>
-						</li>
-						<li data-id="p-5" data-type="privado" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/administracao_clubes.jpg" alt="" />
-								<h4>Administração de Clubes</h4>
-								<p>Gerencia cadastros diversos, orçamento financeiro e
-									controle de acesso</p>
-							</div>
-						</li>
-						<li data-id="p-6" data-type="publico" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/gemmap_saude.png" alt="" />
-								<h4>GemMap - Saúde</h4>
-								<p>Sistema de gerenciamento de postos de saúde, desde o
-									cadastro do paciente</p>
-							</div>
-						</li>
-						<li data-id="p-7" data-type="privado" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/administracao_fazendas.jpg" alt="" />
-								<h4>Administração de Fazendas</h4>
-								<p>Controle de funcionários, controle de rebanhos, folha de
-									pagamento e contabilidade rural</p>
-							</div>
-						</li>
-						<li data-id="p-8" data-type="publico" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/portal_transparencia.png" alt="" />
-								<h4>Portal da Transparência</h4>
-								<p>Serviço com acesso aberto a todos, onde estão disponíveis
-									as receitas e despesas da Prefeitura</p>
-							</div>
-						</li>
-						<li data-id="p-9" data-type="privado" class="span3">
-							<div class="work">
-								<img
-									src="assets/img/solucoes/associacao_comercial_industrial.jpg"
-									alt="" />
-								<h4>Associação Comercial e Industrial</h4>
-								<p>Controle de estoque, conciliação bancária, gerenciamento
-									de clientes e vendas</p>
-							</div>
-						</li>
-						<li data-id="p-10" data-type="publico" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/processo_legislativo.png" alt="" />
-								<h4>Processo Legislativo</h4>
-								<p>Apoia as Casas Legislativas nas suas atividades de
-									transparência (como Comissões e Mesa Diretora)</p>
-							</div>
-						</li>
-						<li data-id="p-11" data-type="privado" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/bibliotecas.jpg" alt="" />
-								<h4>Bibliotecas</h4>
-								<p>Cadastro e consulta de livros, autores, assuntos e
-									associados</p>
-							</div>
-						</li>
-						<li data-id="p-12" data-type="privado" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/cartao_ponto.jpg" alt="" />
-								<h4>Cartão de Ponto Eletrônico</h4>
-								<p>Registro por impressão digital, crachá com código de
-									barras ou digitação de código no teclado</p>
-							</div>
-						</li>
-						<li data-id="p-13" data-type="privado" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/auto_pecas.jpg" alt="" />
-								<h4>Comércio de Auto Peças</h4>
-								<p>Cadastros diversos, faturamento, cobrança eletrônica,
-									controle de estoque e emissão de NF-e</p>
-							</div>
-						</li>
-						<li data-id="p-14" data-type="privado" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/equipamentos_som.jpg" alt="" />
-								<h4>Equipamentos Elétricos e Sons</h4>
-								<p>Gerencia todo o serviço realizado no conserto e
-									instalação de sistemas elétricos e de som</p>
-							</div>
-						</li>
-						<li data-id="p-15" data-type="privado" class="span3">
-							<div class="work">
-								<img src="assets/img/solucoes/construcao.jpg" alt="" />
-								<h4>Materiais de Construção</h4>
-								<p>Gerencia orçamentos, estoque, cobrança eletrônica, fluxo
-									de caixa, centro de custo e clientes</p>
-							</div>
-						</li>
-					</ul>
+
+			</h:panelGroup>
+
+			<h:panelGroup
+				rendered="#{MBTemplate.indexAtual == '/index_privado.xhtml'}">
+
+				<!-- Portfolio -->
+				<div class="portfolio portfolio-page container">
+					<div class="row">
+						<div class="portfolio-navigator span12">
+							<h4 class="filter-portfolio">
+								<a class="all" id="active-imgs" href="#">Todos</a> / <a
+									class="administracao" id="" href="#">Administração</a> / <a
+									class="contabilidade" id="" href="#">Contabilidade</a> / <a
+									class="servicos" id="" href="#">Serviços</a> / <a
+									class="vendas" id="" href="#">Vendas</a>
+							</h4>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="portfolio-img">
+							<li data-id="p-3" data-type="contabilidade" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/ativo_fixo.jpg" alt="" />
+									<h4>Ativo Fixo</h4>
+									<p>Cadastro de bens, correções, depreciações e integração
+										com a Contabilidade Gerencial</p>
+								</div>
+							</li>
+							<li data-id="p-5" data-type="administracao" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/administracao_clubes.jpg" alt="" />
+									<h4>Administração de Clubes</h4>
+									<p>Gerencia cadastros diversos, orçamento financeiro e
+										controle de acesso</p>
+								</div>
+							</li>
+							<li data-id="p-7" data-type="administracao" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/administracao_fazendas.jpg"
+										alt="" />
+									<h4>Administração de Fazendas</h4>
+									<p>Controle de funcionários, controle de rebanhos, folha de
+										pagamento e contabilidade rural</p>
+								</div>
+							</li>
+							<li data-id="p-9" data-type="administracao" class="span3">
+								<div class="work">
+									<img
+										src="assets/img/solucoes/associacao_comercial_industrial.jpg"
+										alt="" />
+									<h4>Associação Comercial e Industrial</h4>
+									<p>Controle de estoque, conciliação bancária, gerenciamento
+										de clientes e vendas</p>
+								</div>
+							</li>
+							<li data-id="p-11" data-type="administracao" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/bibliotecas.jpg" alt="" />
+									<h4>Bibliotecas</h4>
+									<p>Cadastro e consulta de livros, autores, assuntos e
+										associados</p>
+								</div>
+							</li>
+							<li data-id="p-12" data-type="administracao" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/cartao_ponto.jpg" alt="" />
+									<h4>Cartão de Ponto Eletrônico</h4>
+									<p>Registro por impressão digital, crachá com código de
+										barras ou digitação de código no teclado</p>
+								</div>
+							</li>
+							<li data-id="p-13" data-type="vendas" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/auto_pecas.jpg" alt="" />
+									<h4>Comércio de Auto Peças</h4>
+									<p>Cadastros diversos, faturamento, cobrança eletrônica,
+										controle de estoque e emissão de NF-e</p>
+								</div>
+							</li>
+							<li data-id="p-14" data-type="servicos" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/equipamentos_som.jpg" alt="" />
+									<h4>Equipamentos Elétricos e Sons</h4>
+									<p>Gerencia todo o serviço realizado no conserto e
+										instalação de sistemas elétricos e de som</p>
+								</div>
+							</li>
+							<li data-id="p-15" data-type="vendas" class="span3">
+								<div class="work">
+									<img src="assets/img/solucoes/construcao.jpg" alt="" />
+									<h4>Materiais de Construção</h4>
+									<p>Gerencia orçamentos, estoque, cobrança eletrônica, fluxo
+										de caixa, centro de custo e clientes</p>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
+			</h:panelGroup>
 
 		</ui:define>
 

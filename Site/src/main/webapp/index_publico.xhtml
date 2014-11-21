@@ -14,65 +14,10 @@ and open the template in the editor.
 
 	<ui:composition template="template_principal.xhtml">
 
-		<ui:define name="topo">
-			<!-- Header -->
-			<div class="container">
-				<div class="header row">
-					<div class="span12">
-						<div class="navbar">
-							<div class="navbar-inner">
-								<a class="btn btn-navbar" data-toggle="collapse"
-									data-target=".nav-collapse"> <span class="icon-bar"></span>
-									<span class="icon-bar"></span> <span class="icon-bar"></span>
-								</a>
-								<h1>
-									<a class="brand" href="index.xhtml">Micromap - Soluções em
-										Informática</a>
-								</h1>
-								<div id="menu" class="nav-collapse collapse">
-									<ul id="mmm" class="nav pull-right">
-										<li class="current-page" id="item1"><a href="index.xhtml"><i
-												class="icon-home"></i><br />Home</a></li>
-										<li id="item2"><a href="solucoes.xhtml"><i
-												class="icon-cogs"></i><br />Soluções</a></li>
-										<li id="item3"><a href="#"><i
-												class="icon-shopping-cart"></i><br />Loja</a></li>
-										<li id="item4"><a href="assistencia.xhtml"><i
-												class="icon-wrench"></i><br />Assistência</a></li>
-										<li id="item5"><a href="empresa.xhtml"><i
-												class="icon-sitemap"></i><br />Empresa</a></li>
-										<li id="item6"><a href="contato.xhtml"><i
-												class="icon-envelope-alt"></i><br />Contato</a></li>
-										<li id="item7" style="width: 120px"></li>
-										<li id="item8" style="width: 100px">
-											<div class="titulo">Você está no</div>
-											<div class="card-container"
-												onclick="location.reload();location.href='index_privado.xhtml'"
-												onmouseover="javascript: rotacionarIconeDireita();"
-												onmouseout="javascript: rotacionarIconeEsquerda();">
-												<div class="card">
-													<div class="side">Setor Público</div>
-													<div class="side back">Ir ao Setor Privado</div>
-												</div>
-												<img src="assets/img/mudar_setor.gif" class="icone"
-													id="icone" />
-											</div>
-
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</ui:define>
-
 		<ui:define name="content">
 
 			<div class="sliders">
-				<ul class="bxslider">
+				<ul class="sliderprincipal">
 					<li><img src="assets/img/slider/banner_publico_1.jpg" /></li>
 					<li><img src="assets/img/slider/banner_publico_2.jpg" /></li>
 					<li><img src="assets/img/slider/banner_publico_3.jpg" /></li>
@@ -121,7 +66,7 @@ and open the template in the editor.
 						<h4>Assistência</h4>
 						<p>Assistência Técnica Especializada na manutenção de diversos
 							equipamentos.</p>
-						<a href="assistencia.xhtml">Saiba Mais</a>
+						<a href="assistencia_publico.xhtml">Saiba Mais</a>
 					</div>
 					<div class="service span3">
 						<div class="icon-awesome">
@@ -182,27 +127,22 @@ and open the template in the editor.
 			<!-- Testimonials -->
 			<div class="testimonials container">
 				<div class="testimonials-title">
-					<h3>Clientes (obs.: Em desenvolvimento)</h3>
+					<h3>Alguns de Nossos Clientes</h3>
 				</div>
-				<div class="row">
-					<div class="testimonial-list span12">
-						<div class="tabbable tabs-below">
-							<div class="tab-content">
-								<div class="tab-pane active" id="prefeituras">
-									<p style="font-size: 16.5px; font-weight: bold;">PREFEITURAS
-										E CÂMARAS</p>
-									<img src="assets/img/clientes/logo_aguas.png" title="" alt="" />
-									<img src="assets/img/clientes/logo_chavantes.png" title=""
-										alt="" /> <img src="assets/img/clientes/logo_fartura.png"
-										title="" alt="" /> <img
-										src="assets/img/clientes/logo_itai.png" title="" alt="" /> <img
-										src="assets/img/clientes/logo_piraju.png" title="" alt="" />
-									<img src="assets/img/clientes/logo_scruz.png" title="" alt="" />
-									<img src="assets/img/clientes/logo_spedro.png" title="" alt="" />
-									<br />
-								</div>
-							</div>
-						</div>
+				<div class="row" style="margin-top: 2%;">
+					<div class="span12">
+						<ul class="slidercidades">
+							<li><img src="assets/img/clientes/aguas.png" /></li>
+							<li><img src="assets/img/clientes/barrabonita.png" /></li>
+							<li><img src="assets/img/clientes/chavantes.png" /></li>
+							<li><img src="assets/img/clientes/fartura.png" /></li>
+							<li><img src="assets/img/clientes/iaras.png" /></li>
+							<li><img src="assets/img/clientes/itai.png" /></li>
+							<li><img src="assets/img/clientes/piraju.png" /></li>
+							<li><img src="assets/img/clientes/scruz.png" /></li>
+							<li><img src="assets/img/clientes/spedro.png" /></li>
+						</ul>
+						<br />
 					</div>
 				</div>
 			</div>

@@ -332,7 +332,7 @@ strong {
 }
 
 .testimonials-title h3 {
-	width: 180px;
+	width: 280px;
 	margin: 0 auto;
 	background: #fff;
 	font-family: 'Lobster', cursive;
@@ -1189,6 +1189,10 @@ ul.portfolio-img li {
 	position: relative;
 }
 /* Limpa o ul */
-ul.bxslider {
+ul.sliderprincipal {
+	margin: 0;
+}
+
+ul.slidercidades {
 	margin: 0;
 }

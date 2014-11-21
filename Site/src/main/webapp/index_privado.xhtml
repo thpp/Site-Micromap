@@ -14,72 +14,18 @@ and open the template in the editor.
 
 	<ui:composition template="template_principal.xhtml">
 
-		<ui:define name="topo">
-			<!-- Header -->
-			<div class="container">
-				<div class="header row">
-					<div class="span12">
-						<div class="navbar">
-							<div class="navbar-inner">
-								<a class="btn btn-navbar" data-toggle="collapse"
-									data-target=".nav-collapse"> <span class="icon-bar"></span>
-									<span class="icon-bar"></span> <span class="icon-bar"></span>
-								</a>
-								<h1>
-									<a class="brand" href="index.xhtml">Micromap - Soluções em
-										Informática</a>
-								</h1>
-								<div id="menu" class="nav-collapse collapse">
-									<ul id="mmm" class="nav pull-right">
-										<li class="current-page" id="item1"><a href="index.xhtml"><i
-												class="icon-home"></i><br />Home</a></li>
-										<li id="item2"><a href="solucoes.xhtml"><i
-												class="icon-cogs"></i><br />Soluções</a></li>
-										<li id="item3"><a href="#"><i
-												class="icon-shopping-cart"></i><br />Loja</a></li>
-										<li id="item4"><a href="assistencia.xhtml"><i
-												class="icon-wrench"></i><br />Assistência</a></li>
-										<li id="item5"><a href="empresa.xhtml"><i
-												class="icon-sitemap"></i><br />Empresa</a></li>
-										<li id="item6"><a href="contato.xhtml"><i
-												class="icon-envelope-alt"></i><br />Contato</a></li>
-										<li id="item7" style="width: 120px"></li>
-										<li id="item8" style="width: 100px">
-											<div class="titulo">Você está no</div>
-											<div class="card-container"
-												onclick="location.reload();location.href='index_publico.xhtml'"
-												onmouseover="javascript: rotacionarIconeDireita();"
-												onmouseout="javascript: rotacionarIconeEsquerda();">
-												<div class="card">
-													<div class="side">Setor Privado</div>
-													<div class="side back">Ir ao Setor Público</div>
-												</div>
-												<img src="assets/img/mudar_setor.gif" class="icone"
-													id="icone" />
-											</div>
-
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</ui:define>
-
 		<ui:define name="content">
 
 			<div class="sliders">
-				<ul class="bxslider">
+				<ul class="sliderprincipal">
 					<li><img src="assets/img/slider/banner_moto-g.png" /></li>
 					<li><img src="assets/img/slider/banner_iphone.png" /></li>
 					<li><img src="assets/img/slider/banner_motiva.png" /></li>
 					<li><img src="assets/img/slider/banner_notebooks.png" /></li>
 					<li><img src="assets/img/slider/banner_telefone_gps.png" /></li>
 					<li><img src="assets/img/slider/banner_pendrive.png" /></li>
-					<li><img src="assets/img/slider/banner_roteador_impressora.png" /></li>
+					<li><img
+						src="assets/img/slider/banner_roteador_impressora.png" /></li>
 				</ul>
 			</div>
 
@@ -106,7 +52,7 @@ and open the template in the editor.
 						<h4>Soluções</h4>
 						<p>Softwares desenvolvidos por uma equipe especializada,
 							especialmente para você.</p>
-						<a href="solucoes.xhtml">Saiba Mais</a>
+						<a href="solucoes_privado.xhtml">Saiba Mais</a>
 					</div>
 					<div class="service span3">
 						<div class="icon-awesome">
@@ -124,7 +70,7 @@ and open the template in the editor.
 						<h4>Assistência</h4>
 						<p>Assistência Técnica Especializada na manutenção de diversos
 							equipamentos.</p>
-						<a href="assistencia.xhtml">Saiba Mais</a>
+						<a href="assistencia_privado.xhtml">Saiba Mais</a>
 					</div>
 					<div class="service span3">
 						<div class="icon-awesome">
@@ -133,7 +79,7 @@ and open the template in the editor.
 						<h4>Empresa</h4>
 						<p>Conheça nossos objetivos, principais atividades e como
 							funciona nossa Gestão de Qualidade.</p>
-						<a href="empresa.xhtml">Saiba Mais</a>
+						<a href="empresa_privado.xhtml">Saiba Mais</a>
 					</div>
 				</div>
 			</div>
@@ -145,36 +91,38 @@ and open the template in the editor.
 				</div>
 				<div class="row">
 					<div class="work span3">
-						<img src="assets/img/solucoes/gemmap_adm.png" alt="" />
-						<h4>GemMap - Gestão Municipal</h4>
-						<p>Sistema que permite controlar todas os setores da
-							Administração Pública</p>
+						<img src="assets/img/solucoes/ativo_fixo.jpg" alt="" />
+						<h4>Ativo Fixo</h4>
+						<p>Cadastro de bens, correções, depreciações e integração com
+							a Contabilidade Gerencial</p>
 						<div class="icon-awesome">
 							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
 						</div>
 					</div>
 					<div class="work span3">
-						<img src="assets/img/solucoes/gemmap_saude.png" alt="" />
-						<h4>GemMap - Saúde</h4>
-						<p>Sistema de gerenciamento de postos de saúde, desde o
-							cadastro do paciente</p>
+						<img src="assets/img/solucoes/associacao_comercial_industrial.jpg"
+							alt="" />
+						<h4>Associação Comercial e Industrial</h4>
+						<p>Controle de estoque, conciliação bancária, gerenciamento de
+							clientes e vendas</p>
 						<div class="icon-awesome">
 							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
 						</div>
 					</div>
 					<div class="work span3">
-						<img src="assets/img/solucoes/iss_map.png" alt="" />
-						<h4>ISS Map</h4>
-						<p>Sistema de Emissão de Nota Fiscal Eletrônica de Serviço</p>
+						<img src="assets/img/solucoes/cartao_ponto.jpg" alt="" />
+						<h4>Cartão de Ponto Eletrônico</h4>
+						<p>Registro por impressão digital, crachá com código de barras
+							ou digitação de código no teclado</p>
 						<div class="icon-awesome">
 							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
 						</div>
 					</div>
 					<div class="work span3">
-						<img src="assets/img/solucoes/map_frotas.png" alt="" />
-						<h4>Map Frotas</h4>
-						<p>Sistema para controle total de custos e manutenção de
-							frotas de veículos</p>
+						<img src="assets/img/solucoes/construcao.jpg" alt="" />
+						<h4>Materiais de Construção</h4>
+						<p>Gerencia orçamentos, estoque, cobrança eletrônica, fluxo de
+							caixa, centro de custo e clientes</p>
 						<div class="icon-awesome">
 							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
 						</div>
@@ -188,29 +136,13 @@ and open the template in the editor.
 					<h3>Clientes (obs.: Em desenvolvimento)</h3>
 				</div>
 				<div class="row">
-					<div class="testimonial-list span12">
-						<div class="tabbable tabs-below">
-							<div class="tab-content">
-								<div class="tab-pane active" id="prefeituras">
-									<p style="font-size: 16.5px; font-weight: bold;">PREFEITURAS
-										E CÂMARAS</p>
-									<img src="assets/img/clientes/logo_aguas.png" title="" alt="" />
-									<img src="assets/img/clientes/logo_chavantes.png" title=""
-										alt="" /> <img src="assets/img/clientes/logo_fartura.png"
-										title="" alt="" /> <img
-										src="assets/img/clientes/logo_itai.png" title="" alt="" /> <img
-										src="assets/img/clientes/logo_piraju.png" title="" alt="" />
-									<img src="assets/img/clientes/logo_scruz.png" title="" alt="" />
-									<img src="assets/img/clientes/logo_spedro.png" title="" alt="" />
-									<br />
-								</div>
-							</div>
-						</div>
-					</div>
+					<div class="span12"></div>
 				</div>
 			</div>
 
 		</ui:define>
+
+
 	</ui:composition>
 
 

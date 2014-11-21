@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
@@ -15,8 +11,8 @@ and open the template in the editor.
 	<meta charset="utf-8" />
 	<title>Micromap - Soluções em Informática</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<meta name="description" content="Micromap Informática" />
+	<meta name="author" content="Danilo Tucci e Leticia Alves" />
 
 	<!-- CSS -->
 	<link rel="stylesheet"
@@ -30,16 +26,25 @@ and open the template in the editor.
 	<link rel="stylesheet" href="assets/css/flexslider.css" />
 	<link rel="stylesheet" href="assets/css/font-awesome.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
-	
 	<link rel="stylesheet" href="assets/css/style_botao_switch.css" />
-
 	<link rel="stylesheet" href="assets/css/jquery.bxslider.css" />
 
-
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+	<!-- Javascript -->
+	<script src="assets/js/jquery-1.8.2.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.flexslider.js"></script>
+	<script src="assets/js/jquery.tweet.js"></script>
+	<script src="assets/js/jflickrfeed.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="assets/js/jquery.ui.map.min.js"></script>
+	<script src="assets/js/jquery.quicksand.js"></script>
+	<script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+	<script src="assets/js/scripts.js"></script>
+	<!-- Slideshow -->
+	<script src="assets/js/jquery.bxslider.min.js"></script>
+	<script src="assets/js/script_sliders.js"></script>
+	<!-- Botão switch -->
+	<script src="assets/js/script_botao_switch.js"></script>
 
 	<!-- Favicon and touch icons -->
 	<link rel="shortcut icon" href="assets/ico/favicon.png" />
@@ -52,107 +57,143 @@ and open the template in the editor.
 	<link rel="apple-touch-icon-precomposed"
 		href="assets/ico/apple-touch-icon-57-precomposed.png" />
 
-	<script>
-		function rotacionarIconeDireita() {
-
-			var div = document.getElementById('icone'), deg = 66;
-
-			div.style.webkitTransform = 'rotate(' + deg + 'deg)';
-			div.style.mozTransform = 'rotate(' + deg + 'deg)';
-			div.style.msTransform = 'rotate(' + deg + 'deg)';
-			div.style.oTransform = 'rotate(' + deg + 'deg)';
-			div.style.transform = 'rotate(' + deg + 'deg)';
-
-		}
-
-		function rotacionarIconeEsquerda() {
-
-			var div = document.getElementById('icone'), deg = 0;
-
-			div.style.webkitTransform = 'rotate(' + deg + 'deg)';
-			div.style.mozTransform = 'rotate(' + deg + 'deg)';
-			div.style.msTransform = 'rotate(' + deg + 'deg)';
-			div.style.oTransform = 'rotate(' + deg + 'deg)';
-			div.style.transform = 'rotate(' + deg + 'deg)';
-
-		}
-	</script>
-
 </h:head>
 
 <h:body>
 
-	<ui:insert name="topo">Topo</ui:insert>
-
-	<ui:insert name="content">Content</ui:insert>
-
-	<!-- Footer -->
-	<footer>
+	<ui:insert name="topo">
+		<!-- Header -->
 		<div class="container">
-			<div class="row">
-				<div class="widget span3">
-					<h4>Sobre a Micromap</h4>
-					<p>A Micromap é uma empresa prestadora de serviços e comércio
-						na área de Informática localizada no interior do Estado de São
-						Paulo.</p>
-					<p>Atuamos nos setores Público e Privado, atendendo toda a
-						região.</p>
-					<p>
-						<a href="empresa.xhtml">Leia Mais</a>
-					</p>
-				</div>
-				<div class="widget span3"></div>
-				<div class="widget span3"></div>
-				<div class="widget span3">
-					<h4>Contato</h4>
-					<p>
-						<i class="icon-map-marker"></i> Rua Conselheiro Dantas, 421 -
-						Centro <br />Santa Cruz do Rio Pardo-SP - Cep 18900-000
-					</p>
-					<p>
-						<i class="icon-phone"></i> Fone: (14) 3332 - 2355
-					</p>
-					<p>
-						<i class="icon-envelope-alt"></i> Email: <a
-							href="mailto:micromap@micromap.com.br">micromap@micromap.com.br</a>
-					</p>
-				</div>
-			</div>
-			<div class="footer-border"></div>
-			<div class="row">
-				<div class="copyright span4"></div>
-				<div class="social span8">
-					Acompanhe a Micromap pelo Facebook <a class="facebook"
-						onclick="window.open('https://pt-br.facebook.com/pages/Micromap/445294642188791');"></a>
+			<div class="header row">
+				<div class="span12">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<a class="btn btn-navbar" data-toggle="collapse"
+								data-target=".nav-collapse"> <span class="icon-bar"></span>
+								<span class="icon-bar"></span> <span class="icon-bar"></span>
+							</a>
+							<h1>
+								<h:panelGroup
+									rendered="#{MBTemplate.indexAtual == '/index_publico.xhtml'}">
+									<a class="brand" href="index_publico.xhtml">Micromap -
+										Soluções em Informática</a>
+								</h:panelGroup>
+								<h:panelGroup
+									rendered="#{MBTemplate.indexAtual == '/index_privado.xhtml'}">
+									<a class="brand" href="index_privado.xhtml">Micromap -
+										Soluções em Informática</a>
+								</h:panelGroup>
+							</h1>
+							<div id="menu" class="nav-collapse collapse">
+								<ul id="mmm" class="nav pull-right">
+									<h:panelGroup rendered="#{MBTemplate.indexAtual == '/index_publico.xhtml'}">
+										<li class="#{MBTemplate.menuHomeSelecionado}" id="item1"><a
+											href="index_publico.xhtml"><i class="icon-home"></i><br />Home</a></li>
+									</h:panelGroup>
+									<h:panelGroup rendered="#{MBTemplate.indexAtual == '/index_privado.xhtml'}">
+										<li class="#{MBTemplate.menuHomeSelecionado}" id="item1"><a
+											href="index_privado.xhtml"><i class="icon-home"></i><br />Home</a></li>
+									</h:panelGroup>
+									<li class="#{MBTemplate.menuSolucoesSelecionado}" id="item2"><a
+										href="solucoes.xhtml"><i class="icon-cogs"></i><br />Soluções</a></li>
+									<li class="#{MBTemplate.menuLojaSelecionado}" id="item3"><a
+										href="#"><i class="icon-shopping-cart"></i><br />Loja</a></li>
+									<li class="#{MBTemplate.menuAssistenciaSelecionado}" id="item4"><a
+										href="assistencia.xhtml"><i class="icon-wrench"></i><br />Assistência</a></li>
+									<li class="#{MBTemplate.menuEmpresaSelecionado}" id="item5"><a
+										href="empresa.xhtml"><i class="icon-sitemap"></i><br />Empresa</a></li>
+									<li class="#{MBTemplate.menuContatoSelecionado}" id="item6"><a
+										href="contato.xhtml"><i class="icon-envelope-alt"></i><br />Contato</a></li>
+									<li id="item7" style="width: 120px"></li>
+									<li id="item8" style="width: 100px">
+										<div class="titulo">Você está no</div> <h:panelGroup
+											rendered="#{MBTemplate.indexAtual == '/index_publico.xhtml'}">
+											<div class="card-container"
+												onclick="location.reload();location.href='index_privado.xhtml'"
+												onmouseover="javascript: rotacionarIconeDireita();"
+												onmouseout="javascript: rotacionarIconeEsquerda();">
+												<div class="card">
+													<div class="side">Setor Público</div>
+													<div class="side back">Ir ao Setor Privado</div>
+												</div>
+												<img src="assets/img/mudar_setor.gif" class="icone"
+													id="icone" />
+											</div>
+										</h:panelGroup> <h:panelGroup
+											rendered="#{MBTemplate.indexAtual == '/index_privado.xhtml'}">
+											<div class="card-container"
+												onclick="location.reload();location.href='index_publico.xhtml'"
+												onmouseover="javascript: rotacionarIconeDireita();"
+												onmouseout="javascript: rotacionarIconeEsquerda();">
+												<div class="card">
+													<div class="side">Setor Privado</div>
+													<div class="side back">Ir ao Setor Público</div>
+												</div>
+												<img src="assets/img/mudar_setor.gif" class="icone"
+													id="icone" />
+											</div>
+										</h:panelGroup>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</footer>
+	</ui:insert>
+
+	<ui:insert name="content">Content</ui:insert>
+
+	<ui:insert name="rodape">
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="widget span3">
+						<h4>Sobre a Micromap</h4>
+						<p>A Micromap é uma empresa prestadora de serviços e comércio
+							na área de Informática localizada no interior do Estado de São
+							Paulo.</p>
+						<p>Atuamos nos setores Público e Privado, atendendo toda a
+							região.</p>
+						<p>
+							<a href="empresa.xhtml">Leia Mais</a>
+						</p>
+					</div>
+					<div class="widget span3"></div>
+					<div class="widget span3"></div>
+					<div class="widget span3">
+						<h4>Contato</h4>
+						<p>
+							<i class="icon-map-marker"></i> Rua Conselheiro Dantas, 421 -
+							Centro <br />Santa Cruz do Rio Pardo-SP - Cep 18900-000
+						</p>
+						<p>
+							<i class="icon-phone"></i> Fone: (14) 3332 - 2355
+						</p>
+						<p>
+							<i class="icon-envelope-alt"></i> Email: <a
+								href="mailto:micromap@micromap.com.br">micromap@micromap.com.br</a>
+						</p>
+					</div>
+				</div>
+				<div class="footer-border"></div>
+				<div class="row">
+					<div class="copyright span4"></div>
+					<div class="social span8">
+						Acompanhe a Micromap pelo Facebook <a class="facebook"
+							onclick="window.open('https://pt-br.facebook.com/pages/Micromap/445294642188791');"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</ui:insert>
+
 </h:body>
 
-<!-- Javascript -->
-<script src="assets/js/jquery-1.8.2.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.flexslider.js"></script>
-<script src="assets/js/jquery.tweet.js"></script>
-<script src="assets/js/jflickrfeed.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="assets/js/jquery.ui.map.min.js"></script>
-<script src="assets/js/jquery.quicksand.js"></script>
-<script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
-<script src="assets/js/scripts.js"></script>
-
-<!-- Slideshow -->
-<script src="assets/js/jquery.bxslider.min.js"></script>
 <script>
-	$(function() {
-		$('.bxslider').bxSlider({ //initialize plugin
-			mode : 'fade',
-			captions : true,
-			auto : true,
-			autoControls : true
-		});
-	});
+	
 </script>
 
 </html>
