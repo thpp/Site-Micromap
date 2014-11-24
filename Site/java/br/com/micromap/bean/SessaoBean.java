@@ -1,5 +1,7 @@
 package br.com.micromap.bean;
 
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -10,9 +12,10 @@ import javax.faces.bean.SessionScoped;
  * @since 21/11/2014
  *
  */
+@SuppressWarnings("serial")
 @ManagedBean(name = "MBSessao")
 @SessionScoped
-public class SessaoBean {
+public class SessaoBean implements Serializable {
 	private String index;
 
 	public String getIndex() {

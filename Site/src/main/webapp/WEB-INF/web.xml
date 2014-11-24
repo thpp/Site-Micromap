@@ -3,21 +3,21 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
-	
+
 	<!-- Nome da Aplicação -->
 	<display-name>Site</display-name>
-	
+
 	<!-- Arquivo Inicial -->
 	<welcome-file-list>
 		<welcome-file>apresentacao.xhtml</welcome-file>
 	</welcome-file-list>
-	
+
 	<!-- Fase do Projeto -->
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
 		<param-value>Development</param-value>
 	</context-param>
-	
+
 	<!-- Servlet do JSF -->
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
@@ -28,5 +28,20 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
-	
-	</web-app>
+
+	<servlet>
+		<servlet-name>Redirect Servlet</servlet-name>
+		<servlet-class>br.com.micromap.util.RedirectServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Redirect Servlet</servlet-name>
+		<url-pattern>/redirect</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/redirect?url=/apresentacao.xhtml</location>
+	</error-page>
+
+</web-app>

@@ -1,8 +1,10 @@
 package br.com.micromap.bean;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.NavigationHandler;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
@@ -41,8 +43,23 @@ public class TemplateBean implements Serializable {
 	 */
 	@PostConstruct
 	public void redefinirMenu() {
-		String nomePagina = FacesContext.getCurrentInstance().getViewRoot()
-				.getViewId();
+
+		FacesContext context = FacesContext.getCurrentInstance();
+		String nomePagina = context.getViewRoot().getViewId();
+
+		if (!nomePagina.equals("/index_publico.xhtml")
+				&& !nomePagina.equals("/index_privado.xhtml")) {
+			if (sessaoBean.getIndex() == null) {
+				System.out.println("Redirecionar para apresentação.xhtml!");
+				try {
+					FacesContext.getCurrentInstance().getExternalContext()
+							.redirect("apresentacao.xhtml");
+				} catch (IOException e) {
+					// web.xml já trata o erro 404
+					e.printStackTrace();
+				}
+			}
+		}
 
 		switch (nomePagina) {
 		case "/index_publico.xhtml":

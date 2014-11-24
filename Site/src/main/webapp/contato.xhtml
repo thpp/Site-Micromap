@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:body>
 
@@ -32,29 +33,20 @@
 							informações ou novidades da Micromap Informática.</p>
 						<h:form id="frmContato">
 
-							<label for="name" class="nameLabel">Nome</label>
-							<h:inputText id="name" name="name" value="Digite seu nome..."
-								onclick="this.value = ''"
-								onblur="if(this.value == '') this.value = 'Digite seu nome...'" />
+							<label>Nome *</label>
+							<h:inputText />
 
-							<label for="email" class="emailLabel">Email</label>
-							<h:inputText id="email" name="email" value="Digite seu email..."
-								onclick="this.value = ''"
-								onblur="if(this.value == '') this.value = 'Digite seu email...'" />
+							<label>Email *</label>
+							<h:inputText />
 
-							<label for="subject">Assunto</label>
-							<h:inputText id="assunto" name="assunto"
-								value="Digite o assunto..." onclick="this.value = ''"
-								onblur="if(this.value == '') this.value = 'Digite o assunto...'" />
+							<label>Assunto *</label>
+							<h:inputText />
 
-							<label for="message" class="messageLabel">Mensagem</label>
-							<h:inputTextarea id="message" name="message"
-								value="Sua Mensagem..." style="resize: none;"
-								onclick="this.value = ''"
-								onblur="if(this.value == '') this.value = 'Sua Mensagem...'" />
+							<label>Mensagem *</label>
+							<h:inputTextarea style="resize: none;" />
 
 							<h:commandButton class="botaoEnviar" value="Enviar"
-								style="font-weight: bolder; width: 15em; float: left;" />
+								style="font-weight: bolder; width: 15em; float: left; height: 2.5em; " />
 						</h:form>
 					</div>
 					<div class="contact-address span5">
