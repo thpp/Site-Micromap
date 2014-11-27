@@ -32,21 +32,36 @@
 						<p>Informe seus dados abaixo e envie uma mensagem solicitando
 							informações ou novidades da Micromap Informática.</p>
 						<h:form id="frmContato">
+							<h:panelGroup id="pnlContato">
+								<label>Nome *</label>
+								<h:inputText value="#{MBContato.nome}" />
 
-							<label>Nome *</label>
-							<h:inputText />
+								<label>Email *</label>
+								<h:inputText value="#{MBContato.email}" />
 
-							<label>Email *</label>
-							<h:inputText />
+								<label>Assunto *</label>
+								<h:inputText value="#{MBContato.assunto}" />
 
-							<label>Assunto *</label>
-							<h:inputText />
+								<label>Departamento *</label>
+								<h:selectOneMenu id="listaEmaisFormularios"
+									value="#{MBContato.departamentoSelecionado}">
+									<f:selectItem itemLabel="Selecione..." itemValue="" />
+									<f:selectItem itemLabel="Vendas" itemValue="Vendas" />
+									<f:selectItem itemLabel="Programação" itemValue="Programação" />
+									<f:selectItem itemLabel="Assistência Técnica"
+										itemValue="Assistência Técnica" />
+									<f:selectItem itemLabel="SAC" itemValue="SAC" />
+									<f:selectItem itemLabel="Web" itemValue="Web" />
+								</h:selectOneMenu>
 
-							<label>Mensagem *</label>
-							<h:inputTextarea style="resize: none;" />
+								<label>Mensagem *</label>
+								<h:inputTextarea style="resize: none;"
+									value="#{MBContato.mensagem}" />
 
-							<h:commandButton class="botaoEnviar" value="Enviar"
-								style="font-weight: bolder; width: 15em; float: left; height: 2.5em; " />
+								<h:commandButton class="botaoEnviar" value="Enviar"
+									style="font-weight: bolder; width: 15em; float: left; height: 2.5em; "
+									actionListener="#{MBContato.enviarEmail}" />
+							</h:panelGroup>
 						</h:form>
 					</div>
 					<div class="contact-address span5">
@@ -62,10 +77,28 @@
 				</div>
 			</div>
 
+			<p:dialog widgetVar="dlgSucesso" closable="true" resizable="false"
+				appendTo="@(body)" draggable="false" showEffect="blur">
+				<h:outputText value="Email enviado com sucesso!"
+					style="color: green; font-weight: bold;" />
+			</p:dialog>
+
+			<p:dialog widgetVar="dlgCamposInvalidos" closable="true"
+				resizable="false" appendTo="@(body)" draggable="false"
+				showEffect="blur">
+				<h:outputText value="Preencha todos os campos!"
+					style="color: #ffaa00; font-weight: bold;" />
+			</p:dialog>
+
+			<p:dialog widgetVar="dlgErro" closable="true" resizable="false"
+				appendTo="@(body)" draggable="false" showEffect="blur">
+				<h:outputText
+					value="Erro ao enviar email. Tente novamente mais tarde."
+					style="color: red; font-weight: bold;" />
+			</p:dialog>
 		</ui:define>
 
 	</ui:composition>
-
 </h:body>
 
 </html>

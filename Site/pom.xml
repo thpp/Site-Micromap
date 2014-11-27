@@ -1,19 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>br.com.site</groupId>
-  <artifactId>Site</artifactId>
-  <version>1.0.0</version>
-  <packaging>war</packaging>
-  <name>Site</name>
-  
-  	<!-- Codificação -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.site</groupId>
+	<artifactId>Site</artifactId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<name>Site</name>
+
+	<!-- Codificação -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<!-- Dependências -->
 	<dependencies>
-			
+
 		<!-- Implementação do JSF -->
 		<dependency>
 			<groupId>org.glassfish</groupId>
@@ -21,21 +22,40 @@
 			<version>2.2.8</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<dependency>
-            <groupId>org.primefaces</groupId>
-            <artifactId>primefaces</artifactId>
-            <version>5.0</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.primefaces</groupId>
-            <artifactId>primefaces</artifactId>
-            <version>5.0.9</version>
-        </dependency>
-        
-	</dependencies>	
-	
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>5.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>5.0.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.5.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.1</version>
+		</dependency>
+
+
+	</dependencies>
+
 	<!-- Configurações de Compilação e Execuçao -->
 	<build>
 		<finalName>Site</finalName>
@@ -52,7 +72,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	
-  
+
+
+
 </project>
