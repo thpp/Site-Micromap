@@ -27,7 +27,6 @@ public class TemplateBean implements Serializable {
 	private String menuAssistenciaSelecionado;
 	private String menuEmpresaSelecionado;
 	private String menuContatoSelecionado;
-	private Boolean renderizarItemMenu;
 	private String indexAtual;
 
 	/**
@@ -77,6 +76,7 @@ public class TemplateBean implements Serializable {
 			break;
 		case "/loja.xhtml":
 			this.setMenuLojaSelecionado("current-page");
+			sessaoBean.setIndex("/index_privado.xhtml");
 			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		case "/assistencia.xhtml":
@@ -146,14 +146,6 @@ public class TemplateBean implements Serializable {
 
 	public void setMenuContatoSelecionado(String menuContatoSelecionado) {
 		this.menuContatoSelecionado = menuContatoSelecionado;
-	}
-
-	public Boolean getRenderizarItemMenu() {
-		return renderizarItemMenu;
-	}
-
-	public void setRenderizarItemMenu(Boolean renderizarItemMenu) {
-		this.renderizarItemMenu = renderizarItemMenu;
 	}
 
 	public String getIndexAtual() {

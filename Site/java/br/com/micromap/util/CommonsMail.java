@@ -22,7 +22,7 @@ public class CommonsMail {
 
 	public void getConfigurationIntegrator() {
 		properties = new Properties();
-		properties.put("mail.smtp.host", "server17.integrator.com.br");
+		properties.put("mail.smtp.host", "mail.micromap.com.br");
 		properties.put("mail.smtp.port", "587");
 		properties.put("mail.smtp.auth", "true");
 		session = Session.getInstance(properties,
