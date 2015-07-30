@@ -181,7 +181,7 @@ strong {
 	margin-top: 15px;
 	font-size: 50px;
 	line-height: 50px;
-	color: #5d5d5d;
+	color: #003762;
 }
 
 .what-we-do .service h4 {
@@ -1199,4 +1199,11 @@ ul.slidercidades {
 
 ul.sliderempresas {
 	margin: 0;
+}
+
+#imagem{
+	margin-bottom: -18px;
+	margin-top: -30px;
+	max-width: 40%;
+	margin-left: -35px;
 }

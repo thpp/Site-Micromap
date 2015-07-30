@@ -7,11 +7,13 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
-
 	<meta charset="utf-8" />
 	<title>Micromap - Soluções em Informática</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Micromap Informática" />
+	<meta name="keywords" content="topdata, cordao personalizado, cartao de ponto, ponto eletronico, 
+	catraca, controle de acesso, relogio de ponto, vigia, cracha, impressora fiscal santa cruz do rio pardo
+	(marcas da loja)" />
 	<meta name="author" content="Danilo Tucci e Leticia Alves" />
 
 	<!-- CSS -->
@@ -98,18 +100,18 @@
 										href="contato.xhtml"><i class="icon-envelope-alt"></i><br />Contato</a></li>
 									<li id="item7" style="width: 120px"></li>
 									<li id="item8" style="width: 100px">
-										<div class="titulo">Você está no</div> <h:panelGroup
+										<div class="titulo">Você está na</div> <h:panelGroup
 											rendered="#{MBTemplate.indexAtual == '/index_publico.xhtml'}">
 											<div class="card-container"
 												onclick="location.reload();location.href='index_privado.xhtml'"
 												onmouseover="javascript: rotacionarIconeDireita();"
-												onmouseout="javascript: rotacionarIconeEsquerda();">
+												onmouseout="javascript: rotacionarIconeEsquerda();"
+												style="width: 200px">
 												<div class="card">
-													<div class="side">Setor Público</div>
-													<div class="side back">Ir ao Setor Privado</div>
+													<div class="side">Micromap Software</div>
+													<div class="side back">Ir para Comércio</div>
 												</div>
-												<img src="assets/img/mudar_setor.gif" class="icone"
-													id="icone" />
+												
 											</div>
 										</h:panelGroup> <h:panelGroup
 											rendered="#{MBTemplate.indexAtual == '/index_privado.xhtml'}">
@@ -118,11 +120,10 @@
 												onmouseover="javascript: rotacionarIconeDireita();"
 												onmouseout="javascript: rotacionarIconeEsquerda();">
 												<div class="card">
-													<div class="side">Setor Privado</div>
-													<div class="side back">Ir ao Setor Público</div>
+													<div class="side">Micromap Comércio</div>
+													<div class="side back">Ir para Software</div>
 												</div>
-												<img src="assets/img/mudar_setor.gif" class="icone"
-													id="icone" />
+												
 											</div>
 										</h:panelGroup>
 									</li>
@@ -172,7 +173,8 @@
 				</div>
 				<div class="footer-border"></div>
 				<div class="row">
-					<div class="copyright span4"></div>
+					
+					<div class="copyright span4"><a href="http://www.topdata.com.br/" target="_blank" ><img id="imagem" src ="assets/img/icon/icon_topdata.png"></img></a>Site oficial da Topdata</div>
 					<div class="social span8">
 						Acompanhe a Micromap pelo Facebook <a class="facebook"
 							onclick="window.open('https://pt-br.facebook.com/pages/Micromap/445294642188791');"></a>

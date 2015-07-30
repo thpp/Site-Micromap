@@ -14,7 +14,6 @@ and open the template in the editor.
 
 	<meta charset="utf-8" />
 	<title>Micromap - Soluções em Informática</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 
@@ -25,12 +24,9 @@ and open the template in the editor.
 		href="http://fonts.googleapis.com/css?family=Droid+Sans" />
 	<link rel="stylesheet"
 		href="http://fonts.googleapis.com/css?family=Lobster" />
-	<link rel="stylesheet"
-		href="assets/bootstrap/css/bootstrap.min_apresentacao.css" />
 	<link rel="stylesheet" href="assets/css/font-awesome.css" />
+
 	<link rel="stylesheet" href="assets/css/style_apresentacao.css" />
-	<link rel="stylesheet"
-		href="assets/css/style_apresentacao_primefaces.css" />
 
 	<!-- Favicon and touch icons -->
 	<link rel="shortcut icon" href="assets/ico/favicon.png" />
@@ -44,60 +40,65 @@ and open the template in the editor.
 		href="assets/ico/apple-touch-icon-57-precomposed.png" />
 
 
-	<!-- Javascript -->
 
-	<!-- Bootstrap -->
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.flexslider.js"></script>
-	<script src="assets/js/jquery.tweet.js"></script>
-	<script src="assets/js/jflickrfeed.js"></script>
-	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<script src="assets/js/jquery.ui.map.min.js"></script>
-	<script src="assets/js/jquery.quicksand.js"></script>
-	<script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
-	<script src="assets/js/scripts.js"></script>
-	<script src="assets/js/apresentacao.js"></script>
 
 </h:head>
 
-<h:body>
+<body class="page1">
 
+	<!--==============================header=================================-->
+	<header>
+		<div class="container_12">
+			<div class="grid_12">
+				<div class="socials">
+					<a href=""></a> <a href="https://www.facebook.com/pages/Micromap/445294642188791?fref=ts" target="_blank"></a> <a href=""></a> 
+				</div>
+				<h1>
+					<img src="assets/img/apresentacao/apres_logo.png" alt="Boo House" />
+				</h1>
 
-	<!-- Services -->
-	<h1 style="font-weight: bold; margin-top: 3%">ESCOLHA O SETOR
-		DESEJADO</h1>
-	<div class="what-we-do container">
-		<div class="row">
-			<div class="service span3" onclick="delay('index_publico.xhtml')">
-
-				<p:panel header="Setor Público">
-					<p:effect type="slide" event="load" delay="200">
-						<f:param name="direction" value="'up'" />
-					</p:effect>
-					<img src="assets/img/apresentacao/apres_img_publico.jpg"
-						width="70%;" />
-					<p:effect type="puff" event="click" delay="200" />
-				</p:panel>
-
-			</div>
-			<div class="service span3" onclick="delay('index_privado.xhtml')">
-
-				<p:panel header="Setor Privado">
-					<p:effect type="slide" event="load" delay="200">
-						<f:param name="direction" value="'up'" />
-					</p:effect>
-					<img src="assets/img/apresentacao/apres_img_privado.jpg"
-						width="70%;" />
-					<p:effect type="puff" event="click" delay="200" />
-				</p:panel>
+				<div class="clear"></div>
 			</div>
 		</div>
+	</header>
+
+	<!--==============================Content=================================-->
+
+	<div class="content">
+		<a href="index_publico.xhtml" class="block1"> <img
+			src="assets/img/apresentacao/banner_software.jpg" alt=""></img><span
+			class="price"><span>Micromap</span><span><small></small>Software</span><strong></strong></span>
+		</a> <a href="index_privado.xhtml" class="block1"> <img
+			src="assets/img/apresentacao/banner_comercio.jpg" alt=""></img><span
+			class="price"><span>Micromap </span><span><small></small>Comércio</span><strong></strong></span>
+		</a>
 	</div>
-	<h3 style="font-weight: bolder; margin-top: 3%">
-		OU CONFIRA NOSSAS <a href="index_privado.xhtml">PROMOÇÕES</a>
-	</h3>
 
-</h:body>
 
+	<!--==============================footer=================================-->
+
+	<footer>
+		<div class="container_12">
+			<div class="grid_6 prefix_3">
+				<img src="assets/img/apresentacao/apres_logo.png" alt=""></img>
+				<div class="copy">
+					<p style="font-size: 20px; color: #023A69;">
+						Revenda e assistência especializada <a
+							href="http://www.topdata.com.br" target="_blank"><strong>Topdata</strong></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script>
+		$(document).ready(function() {
+			$(".bt-menu-trigger").toggle(function() {
+				$('.bt-menu').addClass('bt-menu-open');
+			}, function() {
+				$('.bt-menu').removeClass('bt-menu-open');
+			});
+		})
+	</script>
+</body>
 </html>
 

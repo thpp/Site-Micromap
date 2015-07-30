@@ -28,6 +28,29 @@ and open the template in the editor.
 					</div>
 				</div>
 			</div>
+			
+			<div class="sliders">
+				<ul class="sliderprincipal">
+					<li><img src="assets/img/slider/publico/banner_publico_1.jpg" /></li>
+					<li><img src="assets/img/slider/publico/banner_publico_2.jpg" /></li>
+					<li><img src="assets/img/slider/publico/banner_publico_3.jpg" /></li>
+					<li><img src="assets/img/slider/publico/banner_publico_4.jpg" /></li>
+				</ul>
+			</div>
+			
+			<div class="call-to-action container">
+				<div class="row">
+					<div class="call-to-action-text span12">
+						<div class="ca-text">
+							<p>Caso deseje contratar algum de nossos serviços, ou
+								solicitar alguma informação, entre em contato conosco.</p>
+						</div>
+						<div class="ca-button">
+							<a href="contato.xhtml">Contate-nos agora!</a>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<h:panelGroup
 				rendered="#{MBTemplate.indexAtual == '/index_publico.xhtml'}">
@@ -111,116 +134,46 @@ and open the template in the editor.
 			<h:panelGroup
 				rendered="#{MBTemplate.indexAtual == '/index_privado.xhtml'}">
 
-				<!-- Portfolio -->
-				<div class="portfolio portfolio-page container">
-					<div class="row">
-						<div class="portfolio-navigator span12">
-							<h4 class="filter-portfolio">
-								<a class="all" id="active-imgs" href="#">Todos</a> / <a
-									class="administracao" id="" href="#">Administração</a> / <a
-									class="contabilidade" id="" href="#">Contabilidade</a> / <a
-									class="vendas_servicos" id="" href="#">Vendas e Serviços</a>
-							</h4>
+				<!-- Portifólio -->
+				<div class="portfolio container">
+				<div class="portfolio-title">
+					<h3>Soluções em Destaque</h3>
+				</div>
+				<div class="row">
+					<div class="work span3">
+						<img src="assets/img/solucoes/privado/cont_gerencial.jpg" alt="" />
+						<h4>Controle de Acesso</h4>
+						<p></p>
+						<div class="icon-awesome">
+							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
 						</div>
 					</div>
-					<div class="row">
-						<ul class="portfolio-img">
-							<li data-id="p-1" data-type="contabilidade" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/cont_gerencial.jpg"
-										alt="" />
-									<h4>Contabilidade Gerencial</h4>
-									<p>Cadastro de bens, correções, depreciações e integração
-										com a Contabilidade Gerencial</p>
-								</div>
-							</li>
-							<li data-id="p-2" data-type="administracao" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/administracao_clubes.jpg"
-										alt="" />
-									<h4>Administração de Clubes</h4>
-									<p>Gerencia cadastros diversos, orçamento financeiro e
-										controle de acesso</p>
-								</div>
-							</li>
-							<li data-id="p-3" data-type="administracao" class="span3">
-								<div class="work">
-									<img
-										src="assets/img/solucoes/privado/administracao_fazendas.jpg"
-										alt="" />
-									<h4>Administração de Fazendas</h4>
-									<p>Controle de funcionários, controle de rebanhos, folha de
-										pagamento e contabilidade rural</p>
-								</div>
-							</li>
-							<li data-id="p-4" data-type="administracao" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/bibliotecas.jpg" alt="" />
-									<h4>Bibliotecas</h4>
-									<p>Cadastro e consulta de livros, autores, assuntos e
-										associados</p>
-								</div>
-							</li>
-							<li data-id="p-5" data-type="administracao" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/floricultura.jpg" alt="" />
-									<h4>Floricultura</h4>
-									<p>Cadastros diversos, entradas, formas de pagamento,
-										cobrança, controle de estoque, etc.</p>
-								</div>
-							</li>
-							<li data-id="p-6" data-type="administracao" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/logistica.jpg" alt="" />
-									<h4>Logística</h4>
-									<p>Faturamento, controle de frotas (gasto por veículo,
-										motorista ou viagem), controle de caixa, etc.</p>
-								</div>
-							</li>
-							<li data-id="p-7" data-type="administracao" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/cartao_ponto.jpg" alt="" />
-									<h4>Cartão de Ponto Eletrônico</h4>
-									<p>Registro por impressão digital, crachá com código de
-										barras ou digitação de código no teclado</p>
-								</div>
-							</li>
-							<li data-id="p-8" data-type="vendas_servicos" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/auto_pecas.jpg" alt="" />
-									<h4>Comércio de Auto Peças</h4>
-									<p>Cadastros diversos, faturamento, cobrança eletrônica,
-										controle de estoque e emissão de NF-e</p>
-								</div>
-							</li>
-							<li data-id="p-9" data-type="administracao" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/alimentos.jpg" alt="" />
-									<h4>Indústria de Alimentos</h4>
-									<p>Estoque, cálculo da produção, orçamentos, comissão,
-										controle de carregamento, etc.</p>
-								</div>
-							</li>
-							<li data-id="p-10" data-type="vendas_servicos" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/equipamentos_som.jpg"
-										alt="" />
-									<h4>Equipamentos Elétricos e Sons</h4>
-									<p>Gerencia todo o serviço realizado no conserto e
-										instalação de sistemas elétricos e de som</p>
-								</div>
-							</li>
-							<li data-id="p-11" data-type="administracao" class="span3">
-								<div class="work">
-									<img src="assets/img/solucoes/privado/construcao.jpg" alt="" />
-									<h4>Materiais de Construção</h4>
-									<p>Gerencia orçamentos, estoque, cobrança eletrônica, fluxo
-										de caixa, centro de custo e clientes</p>
-								</div>
-							</li>
-						</ul>
+					<div class="work span3">
+						<img src="assets/img/solucoes/privado/logistica.jpg" alt="" />
+						<h4>Crachas Personalizados</h4>
+						<p></p>
+						<div class="icon-awesome">
+							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
+						</div>
+					</div>
+					<div class="work span3">
+						<img src="assets/img/solucoes/privado/cartao_ponto.jpg" alt="" />
+						<h4>Automação</h4>
+						<p></p>
+						<div class="icon-awesome">
+							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
+						</div>
+					</div>
+					<div class="work span3">
+						<img src="assets/img/solucoes/privado/construcao.jpg" alt="" />
+						<h4>?</h4>
+						<p></p>
+						<div class="icon-awesome">
+							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
+						</div>
 					</div>
 				</div>
+			</div>
 			</h:panelGroup>
 
 		</ui:define>
