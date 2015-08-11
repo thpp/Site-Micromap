@@ -11,9 +11,8 @@
 	<title>Micromap - Soluções em Informática</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Micromap Informática" />
-	<meta name="keywords" content="topdata, cordao personalizado, cartao de ponto, ponto eletronico, 
-	catraca, controle de acesso, relogio de ponto, vigia, cracha, impressora fiscal santa cruz do rio pardo
-	(marcas da loja)" />
+	<meta name="keywords"
+		content="topdata, catraca, cordao personalizado, cartao de ponto, ponto eletronico, controle de acesso, relogio de ponto, vigia, cracha, impressora fiscal santa cruz do rio pardo"/>
 	<meta name="author" content="Danilo Tucci e Leticia Alves" />
 
 	<!-- CSS -->
@@ -67,66 +66,31 @@
 								<span class="icon-bar"></span> <span class="icon-bar"></span>
 							</a>
 							<h1>
-								<h:panelGroup
-									rendered="#{MBTemplate.indexAtual == '/index_publico.xhtml'}">
-									<a class="brand" href="index_publico.xhtml">Micromap -
-										Soluções em Informática</a>
-								</h:panelGroup>
-								<h:panelGroup
-									rendered="#{MBTemplate.indexAtual == '/index_privado.xhtml'}">
-									<a class="brand" href="index_privado.xhtml">Micromap -
-										Soluções em Informática</a>
-								</h:panelGroup>
+								<a class="brand" href="index_privado.xhtml">Micromap -
+									Soluções em Informática</a>
 							</h1>
+
 							<div id="menu" class="nav-collapse collapse">
 								<ul id="mmm" class="nav pull-right">
-									<h:panelGroup rendered="#{MBTemplate.indexAtual == '/index_publico.xhtml'}">
-										<li class="#{MBTemplate.menuHomeSelecionado}" id="item1"><a
-											href="index_publico.xhtml"><i class="icon-home"></i><br />Home</a></li>
-									</h:panelGroup>
-									<h:panelGroup rendered="#{MBTemplate.indexAtual == '/index_privado.xhtml'}">
-										<li class="#{MBTemplate.menuHomeSelecionado}" id="item1"><a
-											href="index_privado.xhtml"><i class="icon-home"></i><br />Home</a></li>
-									</h:panelGroup>
+
+									<li class="#{MBTemplate.menuHomeSelecionado}" id="item1"><a
+										href="index.xhtml"><i class="icon-home"></i><br />Home</a></li>
 									<li class="#{MBTemplate.menuSolucoesSelecionado}" id="item2"><a
-										href="solucoes.xhtml"><i class="icon-cogs"></i><br />Soluções</a></li>
+										href="solucoes.xhtml"><i class="icon-cogs"></i><br />Software</a></li>
 									<li class="#{MBTemplate.menuLojaSelecionado}" id="item3"><a
 										href="loja.xhtml"><i class="icon-shopping-cart"></i><br />Loja</a></li>
 									<li class="#{MBTemplate.menuAssistenciaSelecionado}" id="item4"><a
 										href="assistencia.xhtml"><i class="icon-wrench"></i><br />Assistência</a></li>
-									<li class="#{MBTemplate.menuEmpresaSelecionado}" id="item5"><a
+									<li class="#{MBTemplate.menuTopdataSelecionado}" id="item5"><a
+										href="topdata.xhtml"><i class="icon-star"></i><br />Topdata</a></li>
+									<li class="#{MBTemplate.menuEmpresaSelecionado}" id="item6"><a
 										href="empresa.xhtml"><i class="icon-sitemap"></i><br />Empresa</a></li>
-									<li class="#{MBTemplate.menuContatoSelecionado}" id="item6"><a
+									<li class="#{MBTemplate.menuContatoSelecionado}" id="item7"><a
 										href="contato.xhtml"><i class="icon-envelope-alt"></i><br />Contato</a></li>
+
 									<li id="item7" style="width: 120px"></li>
-									<li id="item8" style="width: 100px">
-										<div class="titulo">Você está na</div> <h:panelGroup
-											rendered="#{MBTemplate.indexAtual == '/index_publico.xhtml'}">
-											<div class="card-container"
-												onclick="location.reload();location.href='index_privado.xhtml'"
-												onmouseover="javascript: rotacionarIconeDireita();"
-												onmouseout="javascript: rotacionarIconeEsquerda();"
-												style="width: 200px">
-												<div class="card">
-													<div class="side">Micromap Software</div>
-													<div class="side back">Ir para Comércio</div>
-												</div>
-												
-											</div>
-										</h:panelGroup> <h:panelGroup
-											rendered="#{MBTemplate.indexAtual == '/index_privado.xhtml'}">
-											<div class="card-container"
-												onclick="location.reload();location.href='index_publico.xhtml'"
-												onmouseover="javascript: rotacionarIconeDireita();"
-												onmouseout="javascript: rotacionarIconeEsquerda();">
-												<div class="card">
-													<div class="side">Micromap Comércio</div>
-													<div class="side back">Ir para Software</div>
-												</div>
-												
-											</div>
-										</h:panelGroup>
-									</li>
+									<li id="item8" style="width: 100px"></li>
+
 								</ul>
 							</div>
 						</div>
@@ -172,12 +136,14 @@
 					</div>
 				</div>
 				<div class="footer-border"></div>
-				<div class="row">
-					
-					<div class="copyright span4"><a href="http://www.topdata.com.br/" target="_blank" ><img id="imagem" src ="assets/img/icon/icon_topdata.png"></img></a>Site oficial da Topdata</div>
-					<div class="social span8">
-						Acompanhe a Micromap pelo Facebook <a class="facebook"
+				<div class="row" style="width: 800px;">
+					<div class="social span8" style="width: 1170px;">
+						Acompanhe a Micromap nas redes sociais <a class="facebook"
 							onclick="window.open('https://pt-br.facebook.com/pages/Micromap/445294642188791');"></a>
+						<a class="linkedin"
+							onclick="window.open('https://br.linkedin.com/pub/micromap-soluções-em-informática/103/391/a4');"></a>
+						<a class="twitter"
+							onclick="window.open('https://twitter.com/micromapsi');"></a>
 					</div>
 				</div>
 			</div>

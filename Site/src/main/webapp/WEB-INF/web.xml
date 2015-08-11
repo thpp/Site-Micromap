@@ -9,7 +9,7 @@
 
 	<!-- Arquivo Inicial -->
 	<welcome-file-list>
-		<welcome-file>apresentacao.xhtml</welcome-file>
+		<welcome-file>index.xhtml</welcome-file>
 	</welcome-file-list>
 
 	<!-- Fase do Projeto -->
@@ -41,7 +41,7 @@
 
 	<error-page>
 		<error-code>404</error-code>
-		<location>/redirect?url=/apresentacao.xhtml</location>
+		<location>/redirect?url=/index.xhtml</location>
 	</error-page>
 
 </web-app>

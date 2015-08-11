@@ -27,6 +27,7 @@ public class TemplateBean implements Serializable {
 	private String menuAssistenciaSelecionado;
 	private String menuEmpresaSelecionado;
 	private String menuContatoSelecionado;
+	private String menuTopdataSelecionado;
 	private String indexAtual;
 
 	/**
@@ -51,7 +52,7 @@ public class TemplateBean implements Serializable {
 				System.out.println("Redirecionar para apresentação.xhtml!");
 				try {
 					FacesContext.getCurrentInstance().getExternalContext()
-							.redirect("apresentacao.xhtml");
+							.redirect("index.xhtml");
 				} catch (IOException e) {
 					// web.xml já trata o erro 404
 					e.printStackTrace();
@@ -60,12 +61,7 @@ public class TemplateBean implements Serializable {
 		}
 
 		switch (nomePagina) {
-		case "/index_publico.xhtml":
-			this.setMenuHomeSelecionado("current-page");
-			sessaoBean.setIndex(nomePagina);
-			this.setIndexAtual(sessaoBean.getIndex());
-			break;
-		case "/index_privado.xhtml":
+		case "/index.xhtml":
 			this.setMenuHomeSelecionado("current-page");
 			sessaoBean.setIndex(nomePagina);
 			this.setIndexAtual(sessaoBean.getIndex());
@@ -81,6 +77,10 @@ public class TemplateBean implements Serializable {
 			break;
 		case "/assistencia.xhtml":
 			this.setMenuAssistenciaSelecionado("current-page");
+			this.setIndexAtual(sessaoBean.getIndex());
+			break;
+		case "/topdata.xhtml":
+			this.setMenuTopdataSelecionado("current-page");
 			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		case "/empresa.xhtml":
@@ -162,6 +162,14 @@ public class TemplateBean implements Serializable {
 
 	public void setSessaoBean(SessaoBean sessaoBean) {
 		this.sessaoBean = sessaoBean;
+	}
+	
+	public String getMenuTopdataSelecionado() {
+		return menuTopdataSelecionado;
+	}
+	
+	public void setMenuTopdataSelecionado(String menuTopdataSelecionado) {
+		this.menuTopdataSelecionado = menuTopdataSelecionado;
 	}
 
 }
