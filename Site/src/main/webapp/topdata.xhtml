@@ -15,131 +15,119 @@ and open the template in the editor.
 	<ui:composition template="template_principal.xhtml">
 
 		<ui:define name="content">
+			<h:form>
+				<div class="sliders">
+					<ul class="sliderprincipal">
+						<li><img src="assets/img/slider/topdata/banner_01.jpg"
+							style="height: 299px;" /></li>
+						<li><img src="assets/img/slider/topdata/banner_02.jpg"
+							style="height: 299px;" /></li>
+						<li><img src="assets/img/slider/topdata/banner_03.jpg"
+							style="height: 299px;" /></li>
+						<li><img src="assets/img/slider/topdata/banner_04.jpg"
+							style="height: 299px;" /></li>
+					</ul>
+				</div>
 
-			<div class="sliders">
-				<ul class="sliderprincipal">
-					<li><img
-						src="assets/img/slider/topdata/banner_01.jpg"
-						style="height: 299px;" /></li>
-					<li><img
-						src="assets/img/slider/topdata/banner_02.jpg"
-						style="height: 299px;" /></li>
-					<li><img src="assets/img/slider/topdata/banner_03.jpg"
-						style="height: 299px;" /></li>
-					<li><img
-						src="assets/img/slider/topdata/banner_04.jpg"
-						style="height: 299px;" /></li>
-				</ul>
-			</div>
+				<!-- Site Description -->
+				<div class="presentation container">
+					<h2>
+						Nós somos a <span class="blue">Micromap</span>, soluções em
+						informática.
+					</h2>
+					<p>
+						Atendemos o <span class="blue">Setor Público</span> e o <span
+							class="blue">Setor Privado </span>com <span class="blue">Satisfação
+							Garantida</span>.
+					</p>
+				</div>
 
-			<!-- Site Description -->
-			<div class="presentation container">
-				<h2>
-					Nós somos a <span class="blue">Micromap</span>, soluções em
-					informática.
-				</h2>
-				<p>
-					Atendemos o <span class="blue">Setor Público</span> e o <span
-						class="blue">Setor Privado </span>com <span class="blue">Satisfação
-						Garantida</span>.
-				</p>
-			</div>
-			
-			<div class="call-to-action container">
-				<div class="row">
-					<div class="call-to-action-text span12">
-						<div class="ca-text">
-							<p>Caso deseje contratar algum de nossos serviços, ou
-								solicitar alguma informação, entre em contato conosco.</p>
-						</div>
-						<div class="ca-button">
-							<a href="contato.xhtml">Contate-nos agora!</a>
+				<div class="call-to-action container">
+					<div class="row">
+						<div class="call-to-action-text span12">
+							<div class="ca-text">
+								<p>Caso deseje contratar algum de nossos serviços, ou
+									solicitar alguma informação, entre em contato conosco.</p>
+							</div>
+							<div class="ca-button">
+								<a onclick="irParaContato()" style="cursor: pointer !important;">Contate-nos
+									agora!</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
 
-			<!-- TOPDATA -->
-			<div class="portfolio container">
-				<div class="portfolio-title">
-					<h3>Soluções em Destaque Controle de acesso Topdata</h3>
-				</div>
-				<div class="row">
-					<div class="work span3">
-						<img
-							src="assets/img/solucoes/topdata/relogio_de_ponto_INMETRO.jpg"
-							alt="" style="height: 181px; width: 270px;" />
-						<h4>Relógio de ponto INMENTRO</h4>
-						<p>Identificação biométrica, cartão código de barras,
-							proximidade ou teclado em um mesmo produto. Lançamento para
-							outubro de 2015</p>
-						<div class="icon-awesome">
-							<a href="topdata.xhtml"><i class="icon-plus"></i></a>
-						</div>
+				<!-- TOPDATA -->
+				<div class="portfolio container">
+					<div class="portfolio-title">
+						<h3>Soluções em Destaque</h3>
 					</div>
-					<div class="work span3">
-						<img
-							src="assets/img/solucoes/topdata/catraca_de_acesso_ especial.jpg"
-							alt="" />
-						<h4>Catraca de acesso especial</h4>
-						<p>Para oferecer conforto ao usuário portador de necessidades
-							especiais, sem deixar de garantir a segurança do seu
-							empreendimento</p>
-						<div class="icon-awesome">
-							<a href="topdata.xhtml"><i class="icon-plus"></i></a>
+					<div class="row">
+						<div class="work span3">
+							<img
+								src="assets/img/solucoes/topdata/relogio_de_ponto_INMETRO.jpg"
+								alt="" style="height: 181px; width: 270px;" />
+							<h4>Relógio de ponto INMENTRO</h4>
+							<p>Identificação biométrica, cartão código de barras,
+								proximidade ou teclado em um mesmo produto. Lançamento para
+								outubro de 2015</p>
 						</div>
-					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/topdata/catraca_biometrica.jpg"
-							alt="" />
-						<h4>Catraca biométrica</h4>
-						<p>Controle de acesso com coleta das informações de entrada e
-							saída dos usuários e bloqueio mecânico que garante a segurança do
-							local</p>
-						<div class="icon-awesome">
-							<a href="topdata.xhtml"><i class="icon-plus"></i></a>
+						<div class="work span3">
+							<img
+								src="assets/img/solucoes/topdata/catraca_de_acesso_ especial.jpg"
+								alt="" />
+							<h4>Catraca de acesso especial</h4>
+							<p>Para oferecer conforto ao usuário portador de necessidades
+								especiais, sem deixar de garantir a segurança do seu
+								empreendimento</p>
 						</div>
-					</div>
-					<div class="work span3">
-						<img
-							src="assets/img/solucoes/topdata/controle_de_ponto_funcionarios.jpg"
-							alt="" />
-						<h4>Controle de ponto funcionários</h4>
-						<p>Os relógios de ponto eletrônico são equipamentos para
-							registro de ponto, homologados pelo Ministério do Trabalho</p>
-						<div class="icon-awesome">
-							<a href="topdata.xhtml"><i class="icon-plus"></i></a>
+						<div class="work span3">
+							<img src="assets/img/solucoes/topdata/catraca_biometrica.jpg"
+								alt="" />
+							<h4>Catraca biométrica</h4>
+							<p>Controle de acesso com coleta das informações de entrada e
+								saída dos usuários e bloqueio mecânico que garante a segurança
+								do local</p>
+						</div>
+						<div class="work span3">
+							<img
+								src="assets/img/solucoes/topdata/controle_de_ponto_funcionarios.jpg"
+								alt="" />
+							<h4>Controle de ponto funcionários</h4>
+							<p>Os relógios de ponto eletrônico são equipamentos para
+								registro de ponto, homologados pelo Ministério do Trabalho</p>
 						</div>
 					</div>
 				</div>
-			</div>
 
 
 
-			<!-- Testimonials -->
-			<div class="testimonials container">
-				<div class="testimonials-title">
-					<h3>Alguns de Nossos Clientes</h3>
-				</div>
-				<div class="row" style="margin-top: 2%;">
-					<div class="span12">
-						<ul class="slidercidades">
-							<li><img src="assets/img/clientes/publico/aguas.png" /></li>
-							<li><img src="assets/img/clientes/publico/barrabonita.png" /></li>
-							<li><img src="assets/img/clientes/publico/chavantes.png" /></li>
-							<li><img src="assets/img/clientes/publico/fartura.png" /></li>
-							<li><img src="assets/img/clientes/publico/iaras.png" /></li>
-							<li><img src="assets/img/clientes/publico/itai.png" /></li>
-							<li><img src="assets/img/clientes/publico/piraju.png" /></li>
-							<li><img src="assets/img/clientes/publico/scruz.png" /></li>
-							<li><img src="assets/img/clientes/publico/spedro.png" /></li>
-						</ul>
-						<br />
-					</div>
-				</div>
-			</div>
-
+				<!-- Testimonials -->
+				<!-- 				<div class="testimonials container"> -->
+				<!-- 					<div class="testimonials-title"> -->
+				<!-- 						<h3>Alguns de Nossos Clientes</h3> -->
+				<!-- 					</div> -->
+				<!-- 					<div class="row" style="margin-top: 2%;"> -->
+				<!-- 						<div class="span12"> -->
+				<!-- 							<ul class="slidercidades"> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/aguas.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/barrabonita.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/chavantes.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/fartura.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/iaras.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/itai.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/piraju.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/scruz.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/spedro.png" /></li> -->
+				<!-- 							</ul> -->
+				<!-- 							<br /> -->
+				<!-- 						</div> -->
+				<!-- 					</div> -->
+				<!-- 				</div> -->
+				<p:remoteCommand name="irParaContato"
+					action="#{MBTemplate.irParaContato}" />
+			</h:form>
 		</ui:define>
 	</ui:composition>
 

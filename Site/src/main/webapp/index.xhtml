@@ -15,301 +15,334 @@ and open the template in the editor.
 	<ui:composition template="template_principal.xhtml">
 
 		<ui:define name="content">
+			<h:form>
 
-			<div class="sliders">
-				<ul class="sliderprincipal">
-					<li><img src="assets/img/index/banner_topdata_catraca.jpg" /></li>
-					<li><img src="assets/img/index/banner_privado.png" /></li>
-					<li><img src="assets/img/index/banner_publico.jpg" /></li>
-					<li><img src="assets/img/index/banner_topdata_relogio.jpg" /></li>
-					<li><img src="assets/img/index/banner_motiva.png" /></li>
-				</ul>
-			</div>
-
-			<!-- Site Description -->
-			<div class="presentation container">
-				<h2>
-				
-					Nós somos a <span class="blue">Micromap</span>, soluções em
-					informática.
-				</h2>
-				<p>
-					Atendemos o <span class="blue">Setor Público</span> e o <span
-						class="blue">Setor Privado </span>com <span class="blue">Satisfação
-						Garantida</span>.
-				</p>
-			</div>
-
-			<!-- Services -->
-			<div class="what-we-do container">
-				<div class="row">
-					<div class="service span3">
-						<div class="icon-awesome">
-							<i class="icon-cogs"></i>
-						</div>
-						<h4>Software</h4>
-						<p style="height: 72px">Softwares desenvolvidos por uma equipe
-							especializada, especialmente para você.</p>
-						<a href="solucoes.xhtml">Saiba Mais</a>
-					</div>
-					<div class="service span3">
-						<div class="icon-awesome">
-							<i class="icon-shopping-cart"></i>
-						</div>
-						<h4>Loja</h4>
-						<p style="height: 72px">Confira nosso catálogo de produtos
-							disponíveis, ou encomende um produto específico.</p>
-						<a href="loja.xhtml">Saiba Mais</a>
-					</div>
-					<div class="service span3">
-						<div class="icon-awesome">
-							<i class="icon-wrench"></i>
-						</div>
-						<h4>Assistência</h4>
-						<p style="height: 72px">Assistência Técnica Especializada na
-							manutenção de diversos equipamentos.</p>
-						<a href="assistencia.xhtml">Saiba Mais</a>
-					</div>
-					<div class="service span3">
-						<div class="icon-awesome">
-							<i class="icon-sitemap"></i>
-						</div>
-						<h4>Topdata</h4>
-						<p style="height: 72px">Conheça a linha Topdata de catracas e
-							relógios de ponto eletrônico, revenda e assistência
-							especializada.</p>
-						<a href="topdata.xhtml">Saiba Mais</a>
-					</div>
-
+				<div class="sliders">
+					<ul class="sliderprincipal">
+						<li><img src="assets/img/index/banner_topdata_catraca.jpg" /></li>
+						<li><img src="assets/img/index/banner_privado.png" /></li>
+						<li><img src="assets/img/index/banner_publico.jpg" /></li>
+						<li><img src="assets/img/index/banner_topdata_relogio.jpg" /></li>
+						<li><img src="assets/img/index/banner_motiva.png" /></li>
+					</ul>
 				</div>
-			</div>
 
-			<!-- TOPDATA -->
-			<div class="portfolio container">
-				<div class="portfolio-title">
-					<h3>Soluções em Destaque Controle de acesso Topdata</h3>
+				<!-- Site Description -->
+				<div class="presentation container">
+					<h2>
+
+						Nós somos a <span class="blue">Micromap</span>, soluções em
+						informática.
+					</h2>
+					<p>
+						Atendemos o <span class="blue">Setor Público</span> e o <span
+							class="blue">Setor Privado </span>com <span class="blue">Satisfação
+							Garantida</span>.
+					</p>
 				</div>
-				<div class="row">
-					<div class="work span3">
-						<img
-							src="assets/img/solucoes/topdata/relogio_de_ponto_INMETRO.jpg"
-							alt="" style="height: 181px; width: 270px;" />
-						<h4>Relógio de ponto INMENTRO</h4>
-						<p>Identificação biométrica, cartão código de barras,
-							proximidade ou teclado em um mesmo produto. Lançamento para
-							outubro de 2015</p>
-						<div class="icon-awesome">
-							<a href="topdata.xhtml"><i class="icon-plus"></i></a>
+
+				<!-- Services -->
+				<div class="what-we-do container">
+					<div class="row">
+						<div class="service span3">
+							<div class="icon-awesome">
+								<i class="icon-cogs" style="color: #6CC56C !important;"></i>
+							</div>
+							<h4>Software</h4>
+							<p style="height: 72px">Softwares desenvolvidos por uma
+								equipe especializada, especialmente para você.</p>
+							<a onclick="irParaSoftware()" style="cursor: pointer !important;">Saiba
+								Mais</a>
 						</div>
-					</div>
-					<div class="work span3">
-						<img
-							src="assets/img/solucoes/topdata/catraca_de_acesso_ especial.jpg"
-							alt="" />
-						<h4>Catraca de acesso especial</h4>
-						<p>Para oferecer conforto ao usuário portador de necessidades
-							especiais, sem deixar de garantir a segurança do seu
-							empreendimento</p>
-						<div class="icon-awesome">
-							<a href="topdata.xhtml"><i class="icon-plus"></i></a>
+						<div class="service span3">
+							<div class="icon-awesome">
+								<i class="icon-shopping-cart" style="color: #BF5252 !important;"></i>
+							</div>
+							<h4>Loja</h4>
+							<p style="height: 72px">Confira nosso catálogo de produtos
+								disponíveis, ou encomende um produto específico.</p>
+							<a onclick="irParaLoja()" style="cursor: pointer !important;">Saiba
+								Mais</a>
 						</div>
-					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/topdata/catraca_biometrica.jpg"
-							alt="" />
-						<h4>Catraca biométrica</h4>
-						<p>Controle de acesso com coleta das informações de entrada e
-							saída dos usuários e bloqueio mecânico que garante a segurança do
-							local</p>
-						<div class="icon-awesome">
-							<a href="topdata.xhtml"><i class="icon-plus"></i></a>
+						<div class="service span3">
+							<div class="icon-awesome">
+								<i class="icon-wrench" style="color: black !important;"></i>
+							</div>
+							<h4>Assistência</h4>
+							<p style="height: 72px">Assistência Técnica Especializada na
+								manutenção de diversos equipamentos.</p>
+							<a onclick="irParaAssistencia()"
+								style="cursor: pointer !important;">Saiba Mais</a>
 						</div>
-					</div>
-					<div class="work span3">
-						<img
-							src="assets/img/solucoes/topdata/controle_de_ponto_funcionarios.jpg"
-							alt="" />
-						<h4>Controle de ponto funcionários</h4>
-						<p>Os relógios de ponto eletrônico são equipamentos para
-							registro de ponto, homologados pelo Ministério do Trabalho</p>
-						<div class="icon-awesome">
-							<a href="topdata.xhtml"><i class="icon-plus"></i></a>
+						<div class="service span3">
+							<div class="icon-awesome">
+								<i class="icon-star" style="color: #D8D82B !important;"></i>
+							</div>
+							<h4>Topdata</h4>
+							<p style="height: 72px">Conheça a linha Topdata de catracas e
+								relógios de ponto eletrônico, revenda e assistência
+								especializada.</p>
+							<a onclick="irParaTopdata()" style="cursor: pointer !important;">Saiba
+								Mais</a>
 						</div>
+
 					</div>
 				</div>
-			</div>
 
-			<!-- LOJA -->
-			<div class="portfolio container">
-				<div class="portfolio-title">
-					<h3>Soluções em Destaque Micromap Loja</h3>
-				</div>
-				<div class="row">
-					<div class="work span3">
-						<img src="assets/img/solucoes/loja/leitor.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Automação</h4>
-						<p>Ampla variedades de modelos de leitores de código de barras
-							das melhores marcas do mercado</p>
-						<div class="icon-awesome">
-							<a href="loja.xhtml"><i class="icon-plus"></i></a>
-						</div>
+				<!-- TOPDATA -->
+				<div class="portfolio container">
+					<div class="portfolio-title">
+						<h3>Topdata</h3>
 					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/loja/crachas.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Crachás personalizados</h4>
-						<p>Soluções em crachás e cartões. Criamos crachás
-							personalizados para sua empresa, feiras e eventos em geral</p>
-						<div class="icon-awesome">
-							<a href="loja.xhtml"><i class="icon-plus"></i></a>
+					<div class="row">
+						<div class="work span3">
+							<img
+								src="assets/img/solucoes/topdata/relogio_de_ponto_INMETRO.jpg"
+								alt="" style="height: 181px; width: 270px;" />
+							<h4>Relógio de ponto INMENTRO</h4>
+							<p>Identificação biométrica, cartão código de barras,
+								proximidade ou teclado em um mesmo produto. Lançamento para
+								outubro de 2015</p>
+							<div class="icon-awesome">
+								<a onclick="irParaTopdata()" style="cursor: pointer !important;"><i
+									class="icon-plus"></i></a>
+							</div>
 						</div>
-					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/loja/catraca_academia.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Controle de acesso</h4>
-						<p>Revenda especializada da linha de produtos topdata, relógio
-							de pontos e catracas. O melhor controle de acesso para sua
-							empresa ou evento</p>
-						<div class="icon-awesome">
-							<a href="loja.xhtml"><i class="icon-plus"></i></a>
+						<div class="work span3">
+							<img
+								src="assets/img/solucoes/topdata/catraca_de_acesso_ especial.jpg"
+								alt="" />
+							<h4>Catraca de acesso especial</h4>
+							<p>Para oferecer conforto ao usuário portador de necessidades
+								especiais, sem deixar de garantir a segurança do seu
+								empreendimento</p>
+							<div class="icon-awesome">
+								<a onclick="irParaTopdata()" style="cursor: pointer !important;"><i
+									class="icon-plus"></i></a>
+							</div>
 						</div>
-					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/loja/perifericos.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Computadores e periféricos</h4>
-						<p>Temos celulares , computadores, monitores, impressoras,
-							tablets, GPS, mouses, fones de ouvido e muito mais !</p>
-						<div class="icon-awesome">
-							<a href="loja.xhtml"><i class="icon-plus"></i></a>
+						<div class="work span3">
+							<img src="assets/img/solucoes/topdata/catraca_biometrica.jpg"
+								alt="" />
+							<h4>Catraca biométrica</h4>
+							<p>Controle de acesso com coleta das informações de entrada e
+								saída dos usuários e bloqueio mecânico que garante a segurança
+								do local</p>
+							<div class="icon-awesome">
+								<a onclick="irParaTopdata()" style="cursor: pointer !important;"><i
+									class="icon-plus"></i></a>
+							</div>
+						</div>
+						<div class="work span3">
+							<img
+								src="assets/img/solucoes/topdata/controle_de_ponto_funcionarios.jpg"
+								alt="" />
+							<h4>Controle de ponto funcionários</h4>
+							<p>Os relógios de ponto eletrônico são equipamentos para
+								registro de ponto, homologados pelo Ministério do Trabalho</p>
+							<div class="icon-awesome">
+								<a onclick="irParaTopdata()" style="cursor: pointer !important;"><i
+									class="icon-plus"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- SOFTWARE -->
-			<div class="portfolio container">
-				<div class="portfolio-title">
-					<h3>Soluções em Destaque Micromap Software</h3>
-				</div>
-				<div class="row">
-					<div class="work span3">
-						<img src="assets/img/solucoes/publico/gemmap_adm.jpg" alt="" />
-						<h4>GemMap - Gestão Municipal</h4>
-						<p>Sistema que permite controlar todas os setores da
-							Administração Pública</p>
-						<div class="icon-awesome">
-							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
-						</div>
+				<!-- LOJA -->
+				<div class="portfolio container">
+					<div class="portfolio-title">
+						<h3>Micromap Loja</h3>
 					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/publico/gemmap_saude.png" alt="" />
-						<h4>GemMap - Saúde</h4>
-						<p>Sistema de gerenciamento de postos de saúde, desde o
-							cadastro do paciente</p>
-						<div class="icon-awesome">
-							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
+					<div class="row">
+						<div class="work span3">
+							<img src="assets/img/solucoes/loja/leitor.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Automação</h4>
+							<p>Ampla variedades de modelos de leitores de código de
+								barras das melhores marcas do mercado</p>
+							<div class="icon-awesome">
+								<a onclick="irParaLoja()" style="cursor: pointer !important;"><i
+									class="icon-plus"></i></a>
+							</div>
 						</div>
-					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/publico/iss_map.png" alt="" />
-						<h4>ISS Map</h4>
-						<p>Sistema de Emissão de Nota Fiscal Eletrônica de Serviço</p>
-						<div class="icon-awesome">
-							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
+						<div class="work span3">
+							<img src="assets/img/solucoes/loja/crachas.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Crachás personalizados</h4>
+							<p>Soluções em crachás e cartões. Criamos crachás
+								personalizados para sua empresa, feiras e eventos em geral</p>
+							<div class="icon-awesome">
+								<a onclick="irParaLoja()" style="cursor: pointer !important;"><i
+									class="icon-plus"></i></a>
+							</div>
 						</div>
-					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/publico/map_frotas.jpg" alt="" />
-						<h4>Map Frotas</h4>
-						<p>Sistema para controle total de custos e manutenção de
-							frotas de veículos</p>
-						<div class="icon-awesome">
-							<a href="solucoes.xhtml"><i class="icon-plus"></i></a>
+						<div class="work span3">
+							<img src="assets/img/solucoes/loja/catraca_academia.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Controle de acesso</h4>
+							<p>Revenda especializada da linha de produtos topdata,
+								relógio de pontos e catracas. O melhor controle de acesso para
+								sua empresa ou evento</p>
+							<div class="icon-awesome">
+								<a onclick="irParaLoja()" style="cursor: pointer !important;"><i
+									class="icon-plus"></i></a>
+							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- ASSISTÊNCIA -->
-			<div class="portfolio container">
-				<div class="portfolio-title">
-					<h3>Soluções em Destaque Micromap Assistência</h3>
-				</div>
-				<div class="row">
-					<div class="work span3">
-						<img src="assets/img/solucoes/assistencia/formatando-pc.jpg"
-							alt=""
-							style="background-color: white; height: 181px; width: 270px;" />
-						<h4>Formatação</h4>
-						<p>Back-up de arquivos, instalação do windows 7, 8 , 8.1, drivers e
-							 antivírus, recover e limpeza do gabinete</p>
-						<div class="icon-awesome">
-							<a href="assistencia.xhtml"><i class="icon-plus"></i></a>
-						</div>
-					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/assistencia/controle_de_ponto.jpg"
-							alt="" style="height: 181px; width: 270px;" />
-						<h4>Controle de acesso</h4>
-						<p>Venda e locação de catracas para clubes e eventos,
-							instalação e manutenção de cartão de ponto</p>
-						<div class="icon-awesome">
-							<a href="assistencia.xhtml"><i class="icon-plus"></i></a>
-						</div>
-					</div>
-
-					<div class="work span3">
-						<img src="assets/img/solucoes/assistencia/reparo.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Reparos</h4>
-						<p>Reparos em notebooks, computadores, impressoras, tablets,
-							GPS, dispositivos de controle de energia</p>
-						<div class="icon-awesome">
-							<a href="assistencia.xhtml"><i class="icon-plus"></i></a>
-						</div>
-					</div>
-
-					<div class="work span3">
-						<img src="assets/img/solucoes/assistencia/cabo_rede.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Redes</h4>
-						<p>Contamos com uma equipe técnica altamente qualificada para
-							executar os mais diversos serviços relacionados à instalação de
-							redes</p>
-						<div class="icon-awesome">
-							<a href="assistencia.xhtml"><i class="icon-plus"></i></a>
+						<div class="work span3">
+							<img src="assets/img/solucoes/loja/perifericos.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Computadores e periféricos</h4>
+							<p>Temos celulares , computadores, monitores, impressoras,
+								tablets, GPS, mouses, fones de ouvido e muito mais !</p>
+							<div class="icon-awesome">
+								<a onclick="irParaLoja()" style="cursor: pointer !important;"><i
+									class="icon-plus"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-
-			<!-- Testimonials -->
-			<div class="testimonials container">
-				<div class="testimonials-title">
-					<h3>Alguns de Nossos Clientes</h3>
-				</div>
-				<div class="row" style="margin-top: 2%;">
-					<div class="span12">
-						<ul class="slidercidades">
-							<li><img src="assets/img/clientes/publico/aguas.png" /></li>
-							<li><img src="assets/img/clientes/publico/barrabonita.png" /></li>
-							<li><img src="assets/img/clientes/publico/chavantes.png" /></li>
-							<li><img src="assets/img/clientes/publico/fartura.png" /></li>
-							<li><img src="assets/img/clientes/publico/iaras.png" /></li>
-							<li><img src="assets/img/clientes/publico/itai.png" /></li>
-							<li><img src="assets/img/clientes/publico/piraju.png" /></li>
-							<li><img src="assets/img/clientes/publico/scruz.png" /></li>
-							<li><img src="assets/img/clientes/publico/spedro.png" /></li>
-						</ul>
-						<br />
+				<!-- SOFTWARE -->
+				<div class="portfolio container">
+					<div class="portfolio-title">
+						<h3>Micromap Software</h3>
+					</div>
+					<div class="row">
+						<div class="work span3">
+							<img src="assets/img/solucoes/publico/gemmap_adm.jpg" alt="" />
+							<h4>GemMap - Gestão Municipal</h4>
+							<p>Sistema que permite controlar todas os setores da
+								Administração Pública</p>
+							<div class="icon-awesome">
+								<a onclick="irParaSoftware()"
+									style="cursor: pointer !important;"><i class="icon-plus"></i></a>
+							</div>
+						</div>
+						<div class="work span3">
+							<img src="assets/img/solucoes/publico/gemmap_saude.png" alt="" />
+							<h4>GemMap - Saúde</h4>
+							<p>Sistema de gerenciamento de postos de saúde, desde o
+								cadastro do paciente</p>
+							<div class="icon-awesome">
+								<a onclick="irParaSoftware()"
+									style="cursor: pointer !important;"><i class="icon-plus"></i></a>
+							</div>
+						</div>
+						<div class="work span3">
+							<img src="assets/img/solucoes/publico/iss_map.png" alt="" />
+							<h4>ISS Map</h4>
+							<p>Sistema de Emissão de Nota Fiscal Eletrônica de Serviço</p>
+							<div class="icon-awesome">
+								<a onclick="irParaSoftware()"
+									style="cursor: pointer !important;"><i class="icon-plus"></i></a>
+							</div>
+						</div>
+						<div class="work span3">
+							<img src="assets/img/solucoes/publico/map_frotas.jpg" alt="" />
+							<h4>Map Frotas</h4>
+							<p>Sistema para controle total de custos e manutenção de
+								frotas de veículos</p>
+							<div class="icon-awesome">
+								<a onclick="irParaSoftware()"
+									style="cursor: pointer !important;"><i class="icon-plus"></i></a>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
 
+				<!-- ASSISTÊNCIA -->
+				<div class="portfolio container">
+					<div class="portfolio-title">
+						<h3>Micromap Assistência</h3>
+					</div>
+					<div class="row">
+						<div class="work span3">
+							<img src="assets/img/solucoes/assistencia/formatando-pc.jpg"
+								alt=""
+								style="background-color: white; height: 181px; width: 270px;" />
+							<h4>Formatação</h4>
+							<p>Back-up de arquivos, instalação do windows 7, 8 , 8.1,
+								drivers e antivírus, recover e limpeza do gabinete</p>
+							<div class="icon-awesome">
+								<a onclick="irParaAssistencia()"
+									style="cursor: pointer !important;"><i class="icon-plus"></i></a>
+							</div>
+						</div>
+						<div class="work span3">
+							<img src="assets/img/solucoes/assistencia/controle_de_ponto.jpg"
+								alt="" style="height: 181px; width: 270px;" />
+							<h4>Controle de acesso</h4>
+							<p>Venda e locação de catracas para clubes e eventos,
+								instalação e manutenção de cartão de ponto</p>
+							<div class="icon-awesome">
+								<a onclick="irParaAssistencia()"
+									style="cursor: pointer !important;"><i class="icon-plus"></i></a>
+							</div>
+						</div>
+
+						<div class="work span3">
+							<img src="assets/img/solucoes/assistencia/reparo.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Reparos</h4>
+							<p>Reparos em notebooks, computadores, impressoras, tablets,
+								GPS, dispositivos de controle de energia</p>
+							<div class="icon-awesome">
+								<a onclick="irParaAssistencia()"
+									style="cursor: pointer !important;"><i class="icon-plus"></i></a>
+							</div>
+						</div>
+
+						<div class="work span3">
+							<img src="assets/img/solucoes/assistencia/cabo_rede.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Redes</h4>
+							<p>Contamos com uma equipe técnica altamente qualificada para
+								executar os mais diversos serviços relacionados à instalação de
+								redes</p>
+							<div class="icon-awesome">
+								<a onclick="irParaAssistencia()"
+									style="cursor: pointer !important;"><i class="icon-plus"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Testimonials -->
+				<!-- 				<div class="testimonials container"> -->
+				<!-- 					<div class="testimonials-title"> -->
+				<!-- 						<h3>Alguns de Nossos Clientes</h3> -->
+				<!-- 					</div> -->
+				<!-- 					<div class="row" style="margin-top: 2%;"> -->
+				<!-- 						<div class="span12"> -->
+				<!-- 							<ul class="slidercidades"> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/aguas.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/barrabonita.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/chavantes.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/fartura.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/iaras.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/itai.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/piraju.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/scruz.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/publico/spedro.png" /></li> -->
+				<!-- 							</ul> -->
+				<!-- 							<br /> -->
+				<!-- 						</div> -->
+				<!-- 					</div> -->
+				<!-- 				</div> -->
+				<p:remoteCommand name="irParaHome" action="#{MBTemplate.irParaHome}" />
+				<p:remoteCommand name="irParaSoftware"
+					action="#{MBTemplate.irParaSoftware}" />
+				<p:remoteCommand name="irParaLoja" action="#{MBTemplate.irParaLoja}" />
+				<p:remoteCommand name="irParaAssistencia"
+					action="#{MBTemplate.irParaAssistencia}" />
+				<p:remoteCommand name="irParaTopdata"
+					action="#{MBTemplate.irParaTopdata}" />
+				<p:remoteCommand name="irParaEmpresa"
+					action="#{MBTemplate.irParaEmpresa}" />
+				<p:remoteCommand name="irParaContato"
+					action="#{MBTemplate.irParaContato}" />
+			</h:form>
 		</ui:define>
 	</ui:composition>
 

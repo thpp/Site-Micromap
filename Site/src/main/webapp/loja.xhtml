@@ -15,119 +15,112 @@ and open the template in the editor.
 	<ui:composition template="template_principal.xhtml">
 
 		<ui:define name="content">
+			<h:form>
+				<div class="sliders">
+					<ul class="sliderprincipal">
+						<li><img src="assets/img/slider/privado/banner_moto-g.png" /></li>
+						<li><img src="assets/img/slider/privado/banner_iphone.png" /></li>
+						<li><img src="assets/img/slider/privado/banner_motiva.png" /></li>
+						<li><img src="assets/img/slider/privado/banner_notebooks.png" /></li>
+						<li><img
+							src="assets/img/slider/privado/banner_roteador_impressora.png" /></li>
+					</ul>
+				</div>
 
-			<div class="sliders">
-				<ul class="sliderprincipal">
-					<li><img src="assets/img/slider/privado/banner_moto-g.png" /></li>
-					<li><img src="assets/img/slider/privado/banner_iphone.png" /></li>
-					<li><img src="assets/img/slider/privado/banner_motiva.png" /></li>
-					<li><img src="assets/img/slider/privado/banner_notebooks.png" /></li>
-					<li><img src="assets/img/slider/privado/banner_roteador_impressora.png" /></li>
-				</ul>
-			</div>
+				<!-- Site Description -->
+				<div class="presentation container">
+					<h2>
+						Nós somos a <span class="blue">Micromap</span>, soluções em
+						informática.
+					</h2>
+					<p>
+						Atendemos o <span class="blue">Setor Público</span> e o <span
+							class="blue">Setor Privado </span>com <span class="blue">Satisfação
+							Garantida</span>.
+					</p>
+				</div>
 
-			<!-- Site Description -->
-			<div class="presentation container">
-				<h2>
-					Nós somos a <span class="blue">Micromap</span>, soluções em
-					informática.
-				</h2>
-				<p>
-					Atendemos o <span class="blue">Setor Público</span> e o <span
-						class="blue">Setor Privado </span>com <span class="blue">Satisfação
-						Garantida</span>.
-				</p>
-			</div>
-			
-			<div class="call-to-action container">
-				<div class="row">
-					<div class="call-to-action-text span12">
-						<div class="ca-text">
-							<p>Caso deseje contratar algum de nossos serviços, ou
-								solicitar alguma informação, entre em contato conosco.</p>
-						</div>
-						<div class="ca-button">
-							<a href="contato.xhtml">Contate-nos agora!</a>
+				<div class="call-to-action container">
+					<div class="row">
+						<div class="call-to-action-text span12">
+							<div class="ca-text">
+								<p>Caso deseje contratar algum de nossos serviços, ou
+									solicitar alguma informação, entre em contato conosco.</p>
+							</div>
+							<div class="ca-button">
+								<a onclick="irParaContato()" style="cursor: pointer !important;">Contate-nos
+									agora!</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
 
-			<!-- LOJA -->
-			<div class="portfolio container">
-				<div class="portfolio-title">
-					<h3>Soluções em Destaque Micromap Loja</h3>
-				</div>
-				<div class="row">
-					<div class="work span3">
-						<img src="assets/img/solucoes/loja/leitor.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Automação</h4>
-						<p>Ampla variedades de modelos de leitores de código de barras
-							das melhores marcas do mercado</p>
-						<div class="icon-awesome">
-							<a href="loja.xhtml"><i class="icon-plus"></i></a>
-						</div>
+				<!-- LOJA -->
+				<div class="portfolio container">
+					<div class="portfolio-title">
+						<h3>Soluções em Destaque</h3>
 					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/loja/crachas.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Crachás personalizados</h4>
-						<p>Soluções em crachás e cartões. Criamos crachás
-							personalizados para sua empresa, feiras e eventos em geral</p>
-						<div class="icon-awesome">
-							<a href="loja.xhtml"><i class="icon-plus"></i></a>
+					<div class="row">
+						<div class="work span3">
+							<img src="assets/img/solucoes/loja/leitor.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Automação</h4>
+							<p>Ampla variedades de modelos de leitores de código de
+								barras das melhores marcas do mercado</p>
 						</div>
-					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/loja/catraca_academia.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Controle de acesso</h4>
-						<p>Revenda especializada da linha de produtos topdata, relógio
-							de pontos e catracas. O melhor controle de acesso para sua
-							empresa ou evento</p>
-						<div class="icon-awesome">
-							<a href="loja.xhtml"><i class="icon-plus"></i></a>
+						<div class="work span3">
+							<img src="assets/img/solucoes/loja/crachas.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Crachás personalizados</h4>
+							<p>Soluções em crachás e cartões. Criamos crachás
+								personalizados para sua empresa, feiras e eventos em geral</p>
 						</div>
-					</div>
-					<div class="work span3">
-						<img src="assets/img/solucoes/loja/perifericos.jpg" alt=""
-							style="height: 181px; width: 270px;" />
-						<h4>Computadores e periféricos</h4>
-						<p>Temos celulares , computadores, monitores, impressoras,
-							tablets, GPS, mouses, fones de ouvido e muito mais !</p>
-						<div class="icon-awesome">
-							<a href="loja.xhtml"><i class="icon-plus"></i></a>
+						<div class="work span3">
+							<img src="assets/img/solucoes/loja/catraca_academia.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Controle de acesso</h4>
+							<p>Revenda especializada da linha de produtos topdata,
+								relógio de pontos e catracas. O melhor controle de acesso para
+								sua empresa ou evento</p>
+						</div>
+						<div class="work span3">
+							<img src="assets/img/solucoes/loja/perifericos.jpg" alt=""
+								style="height: 181px; width: 270px;" />
+							<h4>Computadores e periféricos</h4>
+							<p>Temos celulares , computadores, monitores, impressoras,
+								tablets, GPS, mouses, fones de ouvido e muito mais !</p>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- Testimonials -->
-			<div class="testimonials container">
-				<div class="testimonials-title">
-					<h3>Alguns de Nossos Clientes</h3>
-				</div>
-				<div class="row" style="margin-top: 2%;">
-					<div class="span12">
-						<ul class="sliderempresas">
-							<li><img src="assets/img/clientes/privado/associacao_bb.png" /></li>
-							<li><img src="assets/img/clientes/privado/edlin.png" /></li>
-							<li><img src="assets/img/clientes/privado/nardo.png" /></li>
-							<li><img src="assets/img/clientes/privado/rosalito.png" /></li>
-							<li><img src="assets/img/clientes/privado/joca.png" /></li>
-							<li><img src="assets/img/clientes/privado/luvicar.png" /></li>
-							<li><img src="assets/img/clientes/privado/maitan.png" /></li>
-							<li><img src="assets/img/clientes/privado/scarpim.png" /></li>
-							<li><img src="assets/img/clientes/privado/dapare.png" /></li>
-							<li><img src="assets/img/clientes/privado/rio-pardo.png" /></li>
-						</ul>
-						<br />
-					</div>
-				</div>
-			</div>
-
+				<!-- Testimonials -->
+				<!-- 				<div class="testimonials container"> -->
+				<!-- 					<div class="testimonials-title"> -->
+				<!-- 						<h3>Alguns de Nossos Clientes</h3> -->
+				<!-- 					</div> -->
+				<!-- 					<div class="row" style="margin-top: 2%;"> -->
+				<!-- 						<div class="span12"> -->
+				<!-- 							<ul class="sliderempresas"> -->
+				<!-- 								<li><img -->
+				<!-- 									src="assets/img/clientes/privado/associacao_bb.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/privado/edlin.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/privado/nardo.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/privado/rosalito.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/privado/joca.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/privado/luvicar.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/privado/maitan.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/privado/scarpim.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/privado/dapare.png" /></li> -->
+				<!-- 								<li><img src="assets/img/clientes/privado/rio-pardo.png" /></li> -->
+				<!-- 							</ul> -->
+				<!-- 							<br /> -->
+				<!-- 						</div> -->
+				<!-- 					</div> -->
+				<!-- 				</div> -->
+				<p:remoteCommand name="irParaContato"
+					action="#{MBTemplate.irParaContato}" />
+			</h:form>
 		</ui:define>
 
 

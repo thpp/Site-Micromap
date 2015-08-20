@@ -5,9 +5,10 @@ import java.io.Serializable;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
+
+import org.omnifaces.util.Faces;
 
 /**
  * Classe responsável por administrar o template do site
@@ -31,13 +32,6 @@ public class TemplateBean implements Serializable {
 	private String indexAtual;
 
 	/**
-	 * Injeção do Bean responsável por administrar o setor atual
-	 * (público/privado)
-	 */
-	@ManagedProperty(value = "#{MBSessao}")
-	private SessaoBean sessaoBean;
-
-	/**
 	 * Redefine o CSS do Menu (classe 'current-page'), e o index atual
 	 */
 	@PostConstruct
@@ -46,56 +40,60 @@ public class TemplateBean implements Serializable {
 		FacesContext context = FacesContext.getCurrentInstance();
 		String nomePagina = context.getViewRoot().getViewId();
 
-		if (!nomePagina.equals("/index_publico.xhtml")
-				&& !nomePagina.equals("/index_privado.xhtml")) {
-			if (sessaoBean.getIndex() == null) {
-				System.out.println("Redirecionar para apresentação.xhtml!");
-				try {
-					FacesContext.getCurrentInstance().getExternalContext()
-							.redirect("index.xhtml");
-				} catch (IOException e) {
-					// web.xml já trata o erro 404
-					e.printStackTrace();
-				}
-			}
-		}
-
 		switch (nomePagina) {
 		case "/index.xhtml":
 			this.setMenuHomeSelecionado("current-page");
-			sessaoBean.setIndex(nomePagina);
-			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		case "/solucoes.xhtml":
 			this.setMenuSolucoesSelecionado("current-page");
-			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		case "/loja.xhtml":
 			this.setMenuLojaSelecionado("current-page");
-			sessaoBean.setIndex("/index_privado.xhtml");
-			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		case "/assistencia.xhtml":
 			this.setMenuAssistenciaSelecionado("current-page");
-			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		case "/topdata.xhtml":
 			this.setMenuTopdataSelecionado("current-page");
-			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		case "/empresa.xhtml":
 			this.setMenuEmpresaSelecionado("current-page");
-			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		case "/contato.xhtml":
 			this.setMenuContatoSelecionado("current-page");
-			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		default:
 			this.setMenuHomeSelecionado("current-page");
-			this.setIndexAtual(sessaoBean.getIndex());
 			break;
 		}
+	}
+
+	public void irParaHome() throws IOException {
+		Faces.redirect("");
+	}
+
+	public void irParaSoftware() throws IOException {
+		Faces.redirect("micromap_software");
+	}
+
+	public void irParaLoja() throws IOException {
+		Faces.redirect("micromap_loja");
+	}
+
+	public void irParaAssistencia() throws IOException {
+		Faces.redirect("micromap_assistencia_tecnica");
+	}
+
+	public void irParaTopdata() throws IOException {
+		Faces.redirect("revenda_assistencia_topdata");
+	}
+
+	public void irParaEmpresa() throws IOException {
+		Faces.redirect("conheca_nossa_empresa");
+	}
+
+	public void irParaContato() throws IOException {
+		Faces.redirect("entre_em_contato");
 	}
 
 	/************************************************************************************************/
@@ -156,18 +154,10 @@ public class TemplateBean implements Serializable {
 		this.indexAtual = indexAtual;
 	}
 
-	public SessaoBean getSessaoBean() {
-		return sessaoBean;
-	}
-
-	public void setSessaoBean(SessaoBean sessaoBean) {
-		this.sessaoBean = sessaoBean;
-	}
-	
 	public String getMenuTopdataSelecionado() {
 		return menuTopdataSelecionado;
 	}
-	
+
 	public void setMenuTopdataSelecionado(String menuTopdataSelecionado) {
 		this.menuTopdataSelecionado = menuTopdataSelecionado;
 	}

@@ -7,11 +7,6 @@
 	<!-- Nome da Aplicação -->
 	<display-name>Site</display-name>
 
-	<!-- Arquivo Inicial -->
-	<welcome-file-list>
-		<welcome-file>index.xhtml</welcome-file>
-	</welcome-file-list>
-
 	<!-- Fase do Projeto -->
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
@@ -29,19 +24,9 @@
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>Redirect Servlet</servlet-name>
-		<servlet-class>br.com.micromap.util.RedirectServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Redirect Servlet</servlet-name>
-		<url-pattern>/redirect</url-pattern>
-	</servlet-mapping>
-
 	<error-page>
 		<error-code>404</error-code>
-		<location>/redirect?url=/index.xhtml</location>
+		<location>/index.xhtml</location>
 	</error-page>
 
 </web-app>

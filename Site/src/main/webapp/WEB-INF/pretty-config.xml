@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretty-config xmlns="http://ocpsoft.org/schema/rewrite-config-prettyfaces"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://ocpsoft.org/schema/rewrite-config-prettyfaces
+                      http://ocpsoft.org/xml/ns/prettyfaces/rewrite-config-prettyfaces.xsd">
+
+	<url-mapping id="home">
+		<pattern value="/" />
+		<view-id value="/index.xhtml" />
+	</url-mapping>
+
+	<url-mapping id="software">
+		<pattern value="/micromap_software" />
+		<view-id value="/solucoes.xhtml" />
+	</url-mapping>
+
+	<url-mapping id="loja">
+		<pattern value="/micromap_loja" />
+		<view-id value="/loja.xhtml" />
+	</url-mapping>
+
+	<url-mapping id="assistencia">
+		<pattern value="/micromap_assistencia_tecnica" />
+		<view-id value="/assistencia.xhtml" />
+	</url-mapping>
+
+	<url-mapping id="topdata">
+		<pattern value="/revenda_assistencia_topdata" />
+		<view-id value="/topdata.xhtml" />
+	</url-mapping>
+
+	<url-mapping id="empresa">
+		<pattern value="/conheca_nossa_empresa" />
+		<view-id value="/empresa.xhtml" />
+	</url-mapping>
+
+	<url-mapping id="contato">
+		<pattern value="/entre_em_contato" />
+		<view-id value="/contato.xhtml" />
+	</url-mapping>
+
+</pretty-config>                      

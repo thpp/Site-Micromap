@@ -12,8 +12,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Micromap Informática" />
 	<meta name="keywords"
-		content="topdata, catraca, cordao personalizado, cartao de ponto, ponto eletronico, controle de acesso, relogio de ponto, vigia, cracha, impressora fiscal santa cruz do rio pardo"/>
-	<meta name="author" content="Danilo Tucci e Leticia Alves" />
+		content="topdata, catraca, cordao personalizado, cartao de ponto, ponto eletronico, controle de acesso, relogio de ponto, vigia, cracha, impressora fiscal santa cruz do rio pardo" />
+	<meta name="author"
+		content="Leticia Alves, Danilo Tucci (r.i.p) e Filipe Dognani (r.i.p)" />
 
 	<!-- CSS -->
 	<link rel="stylesheet"
@@ -55,99 +56,124 @@
 <h:body>
 
 	<ui:insert name="topo">
-		<!-- Header -->
-		<div class="container">
-			<div class="header row">
-				<div class="span12">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<a class="btn btn-navbar" data-toggle="collapse"
-								data-target=".nav-collapse"> <span class="icon-bar"></span>
-								<span class="icon-bar"></span> <span class="icon-bar"></span>
-							</a>
-							<h1>
-								<a class="brand" href="index_privado.xhtml">Micromap -
-									Soluções em Informática</a>
-							</h1>
+		<h:form>
+			<!-- Header -->
+			<div class="container">
+				<div class="header row">
+					<div class="span12">
+						<div class="navbar">
+							<div class="navbar-inner">
+								<a class="btn btn-navbar" data-toggle="collapse"
+									data-target=".nav-collapse"> <span class="icon-bar"></span>
+									<span class="icon-bar"></span> <span class="icon-bar"></span>
+								</a>
+								<h1>
+									<a class="brand" onclick="irParaHome()"
+										style="cursor: pointer !important;">Micromap - Soluções em
+										Informática</a>
+								</h1>
 
-							<div id="menu" class="nav-collapse collapse">
-								<ul id="mmm" class="nav pull-right">
+								<div id="
+										menu" class="nav-collapse collapse">
+									<ul id="mmm" class="nav pull-right">
 
-									<li class="#{MBTemplate.menuHomeSelecionado}" id="item1"><a
-										href="index.xhtml"><i class="icon-home"></i><br />Home</a></li>
-									<li class="#{MBTemplate.menuSolucoesSelecionado}" id="item2"><a
-										href="solucoes.xhtml"><i class="icon-cogs"></i><br />Software</a></li>
-									<li class="#{MBTemplate.menuLojaSelecionado}" id="item3"><a
-										href="loja.xhtml"><i class="icon-shopping-cart"></i><br />Loja</a></li>
-									<li class="#{MBTemplate.menuAssistenciaSelecionado}" id="item4"><a
-										href="assistencia.xhtml"><i class="icon-wrench"></i><br />Assistência</a></li>
-									<li class="#{MBTemplate.menuTopdataSelecionado}" id="item5"><a
-										href="topdata.xhtml"><i class="icon-star"></i><br />Topdata</a></li>
-									<li class="#{MBTemplate.menuEmpresaSelecionado}" id="item6"><a
-										href="empresa.xhtml"><i class="icon-sitemap"></i><br />Empresa</a></li>
-									<li class="#{MBTemplate.menuContatoSelecionado}" id="item7"><a
-										href="contato.xhtml"><i class="icon-envelope-alt"></i><br />Contato</a></li>
-
-									<li id="item7" style="width: 120px"></li>
-									<li id="item8" style="width: 100px"></li>
-
-								</ul>
+										<li class="#{MBTemplate.menuHomeSelecionado}" id="item1"><a
+											onclick="irParaHome()" style="cursor: pointer !important;"><i
+												class="icon-home"></i><br />Home</a></li>
+										<li class="#{MBTemplate.menuSolucoesSelecionado}" id="item2"><a
+											onclick="irParaSoftware()"
+											style="cursor: pointer !important;"><i class="icon-cogs"></i><br />Software</a></li>
+										<li class="#{MBTemplate.menuLojaSelecionado}" id="item3"><a
+											onclick="irParaLoja()" style="cursor: pointer !important;"><i
+												class="icon-shopping-cart"></i><br />Loja</a></li>
+										<li class="#{MBTemplate.menuAssistenciaSelecionado}"
+											id="item4"><a onclick="irParaAssistencia()"
+											style="cursor: pointer !important;"><i
+												class="icon-wrench"></i><br />Assistência</a></li>
+										<li class="#{MBTemplate.menuTopdataSelecionado}" id="item5"><a
+											onclick="irParaTopdata()" style="cursor: pointer !important;"><i
+												class="icon-star"></i><br />Topdata</a></li>
+										<li class="#{MBTemplate.menuEmpresaSelecionado}" id="item6"><a
+											onclick="irParaEmpresa()" style="cursor: pointer !important;"><i
+												class="icon-sitemap"></i><br />Empresa</a></li>
+										<li class="#{MBTemplate.menuContatoSelecionado}" id="item7"><a
+											onclick="irParaContato()" style="cursor: pointer !important;"><i
+												class="icon-envelope-alt"></i><br />Contato</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			<p:remoteCommand name="irParaHome" action="#{MBTemplate.irParaHome}" />
+			<p:remoteCommand name="irParaSoftware"
+				action="#{MBTemplate.irParaSoftware}" />
+			<p:remoteCommand name="irParaLoja" action="#{MBTemplate.irParaLoja}" />
+			<p:remoteCommand name="irParaAssistencia"
+				action="#{MBTemplate.irParaAssistencia}" />
+			<p:remoteCommand name="irParaTopdata"
+				action="#{MBTemplate.irParaTopdata}" />
+			<p:remoteCommand name="irParaEmpresa"
+				action="#{MBTemplate.irParaEmpresa}" />
+			<p:remoteCommand name="irParaContato"
+				action="#{MBTemplate.irParaContato}" />
+		</h:form>
 	</ui:insert>
 
 	<ui:insert name="content">Content</ui:insert>
 
 	<ui:insert name="rodape">
-		<!-- Footer -->
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="widget span3">
-						<h4>Sobre a Micromap</h4>
-						<p>A Micromap é uma empresa prestadora de serviços e comércio
-							na área de Informática localizada no interior do Estado de São
-							Paulo.</p>
-						<p>Atuamos nos setores Público e Privado, atendendo toda a
-							região.</p>
-						<p>
-							<a href="empresa.xhtml">Leia Mais</a>
-						</p>
+		<h:form>
+			<!-- Footer -->
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="widget span3">
+							<h4>Sobre a Micromap</h4>
+							<p>A Micromap é uma empresa prestadora de serviços e comércio
+								na área de Informática localizada no interior do Estado de São
+								Paulo.</p>
+							<p>Atuamos nos setores Público e Privado, atendendo toda a
+								região.</p>
+							<p>
+								<a onclick="irParaEmpresa()" style="cursor: pointer !important;">Leia
+									Mais</a>
+							</p>
+						</div>
+						<div class="widget span3"></div>
+						<div class="widget span3"></div>
+						<div class="widget span3">
+							<h4>Contato</h4>
+							<p>
+								<i class="icon-map-marker"></i> Rua Conselheiro Dantas, 421 -
+								Centro <br />Santa Cruz do Rio Pardo-SP - Cep 18900-000
+							</p>
+							<p>
+								<i class="icon-phone"></i> Fone: (14) 3332 - 2355
+							</p>
+							<p>
+								<i class="icon-envelope-alt"></i> Email: <a
+									href="mailto:contato@micromap.com.br">contato@micromap.com.br</a>
+							</p>
+						</div>
 					</div>
-					<div class="widget span3"></div>
-					<div class="widget span3"></div>
-					<div class="widget span3">
-						<h4>Contato</h4>
-						<p>
-							<i class="icon-map-marker"></i> Rua Conselheiro Dantas, 421 -
-							Centro <br />Santa Cruz do Rio Pardo-SP - Cep 18900-000
-						</p>
-						<p>
-							<i class="icon-phone"></i> Fone: (14) 3332 - 2355
-						</p>
-						<p>
-							<i class="icon-envelope-alt"></i> Email: <a
-								href="mailto:contato@micromap.com.br">contato@micromap.com.br</a>
-						</p>
+					<div class="footer-border"></div>
+					<div class="row" style="width: 800px;">
+						<div class="social span8" style="width: 1170px;">
+							Acompanhe a Micromap nas redes sociais <a class="facebook"
+								onclick="window.open('https://pt-br.facebook.com/pages/Micromap/445294642188791');"></a>
+							<a class="linkedin"
+								onclick="window.open('https://br.linkedin.com/pub/micromap-soluções-em-informática/103/391/a4');"></a>
+							<a class="twitter"
+								onclick="window.open('https://twitter.com/micromapsi');"></a>
+						</div>
 					</div>
 				</div>
-				<div class="footer-border"></div>
-				<div class="row" style="width: 800px;">
-					<div class="social span8" style="width: 1170px;">
-						Acompanhe a Micromap nas redes sociais <a class="facebook"
-							onclick="window.open('https://pt-br.facebook.com/pages/Micromap/445294642188791');"></a>
-						<a class="linkedin"
-							onclick="window.open('https://br.linkedin.com/pub/micromap-soluções-em-informática/103/391/a4');"></a>
-						<a class="twitter"
-							onclick="window.open('https://twitter.com/micromapsi');"></a>
-					</div>
-				</div>
-			</div>
-		</footer>
+			</footer>
+			<p:remoteCommand name="irParaEmpresa"
+				action="#{MBTemplate.irParaEmpresa}" />
+		</h:form>
 	</ui:insert>
 
 </h:body>
