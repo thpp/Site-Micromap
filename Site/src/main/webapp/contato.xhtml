@@ -4,7 +4,8 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
 
 <h:body>
 
@@ -34,13 +35,13 @@
 						<h:form id="frmContato">
 							<h:panelGroup id="pnlContato">
 								<label>Nome *</label>
-								<h:inputText value="#{MBContato.nome}" />
+								<h:inputText value="#{MBContato.nome}" maxlength="100"/>
 
 								<label>Email *</label>
-								<h:inputText value="#{MBContato.email}" />
-
+								<h:inputText value="#{MBContato.email}" maxlength="50"/>
+								
 								<label>Assunto *</label>
-								<h:inputText value="#{MBContato.assunto}" />
+								<h:inputText value="#{MBContato.assunto}" maxlength="60"/>
 
 								<label>Departamento *</label>
 								<h:selectOneMenu id="listaEmaisFormularios"
@@ -56,11 +57,12 @@
 
 								<label>Mensagem *</label>
 								<h:inputTextarea style="resize: none;"
-									value="#{MBContato.mensagem}" />
+									value="#{MBContato.mensagem}" rows="8"/>
 
 								<h:commandButton class="botaoEnviar" value="Enviar"
 									style="font-weight: bolder; width: 15em; float: left; height: 2.5em; "
 									actionListener="#{MBContato.enviarEmail}" />
+									
 							</h:panelGroup>
 						</h:form>
 					</div>

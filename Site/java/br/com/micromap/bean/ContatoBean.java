@@ -2,6 +2,7 @@ package br.com.micromap.bean;
 
 import javax.faces.bean.ManagedBean;
 
+import org.alfredlibrary.validadores.Email;
 import org.primefaces.context.RequestContext;
 
 import br.com.micromap.util.CommonsMail;
@@ -49,7 +50,7 @@ public class ContatoBean {
 	public boolean validarCampos() {
 		if (nome == null || "".equals(nome))
 			return false;
-		if (email == null || "".equals(email))
+		if (!Email.isValido(email))
 			return false;
 		if (assunto == null || "".equals(assunto))
 			return false;
