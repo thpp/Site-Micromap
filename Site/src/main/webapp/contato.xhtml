@@ -43,18 +43,6 @@
 								<label>Assunto *</label>
 								<h:inputText value="#{MBContato.assunto}" maxlength="60"/>
 
-								<label>Departamento *</label>
-								<h:selectOneMenu id="listaEmaisFormularios"
-									value="#{MBContato.departamentoSelecionado}">
-									<f:selectItem itemLabel="Selecione..." itemValue="" />
-									<f:selectItem itemLabel="Vendas" itemValue="Vendas" />
-									<f:selectItem itemLabel="Programação" itemValue="Programação" />
-									<f:selectItem itemLabel="Assistência Técnica"
-										itemValue="Assistência Técnica" />
-									<f:selectItem itemLabel="SAC" itemValue="SAC" />
-									<f:selectItem itemLabel="Web" itemValue="Web" />
-								</h:selectOneMenu>
-
 								<label>Mensagem *</label>
 								<h:inputTextarea style="resize: none;"
 									value="#{MBContato.mensagem}" rows="8"/>
@@ -69,12 +57,6 @@
 					<div class="contact-address span5">
 						<h4>Localização</h4>
 						<div class="map"></div>
-						<h4>Endereço</h4>
-						<p>
-							Rua Conselheiro Dantas, 421, Centro.<br /> Santa Cruz do Rio
-							Pardo-SP
-						</p>
-						<p>Telefone: (14) 3332-2355</p>
 					</div>
 				</div>
 			</div>

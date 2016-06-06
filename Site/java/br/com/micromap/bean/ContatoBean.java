@@ -14,7 +14,7 @@ public class ContatoBean {
 	private String email;
 	private String assunto;
 	private String mensagem;
-	private String departamentoSelecionado;
+
 
 	public void enviarEmail() {
 
@@ -22,27 +22,21 @@ public class ContatoBean {
 
 			try {
 				/* Envia e-mail */
-				new CommonsMail().enviarEmail(getNome(), getEmail(),
-						getAssunto(), getDepartamentoSelecionado(),
-						getMensagem());
+				new CommonsMail().enviarEmail(getNome(), getEmail(), getAssunto(), getMensagem());
 
 				/* Sucesso */
-				org.primefaces.context.RequestContext.getCurrentInstance()
-						.execute("PF('dlgSucesso').show();");
+				org.primefaces.context.RequestContext.getCurrentInstance().execute("PF('dlgSucesso').show();");
 				limparFormulário();
 
-				RequestContext.getCurrentInstance().update(
-						":frmContato:pnlContato");
+				RequestContext.getCurrentInstance().update(":frmContato:pnlContato");
 
 			} catch (Exception ex) {
 				ex.printStackTrace();
-				org.primefaces.context.RequestContext.getCurrentInstance()
-						.execute("PF('dlgErro').show();");
+				org.primefaces.context.RequestContext.getCurrentInstance().execute("PF('dlgErro').show();");
 			}
 
 		} else {
-			org.primefaces.context.RequestContext.getCurrentInstance().execute(
-					"PF('dlgCamposInvalidos').show();");
+			org.primefaces.context.RequestContext.getCurrentInstance().execute("PF('dlgCamposInvalidos').show();");
 		}
 
 	}
@@ -56,9 +50,6 @@ public class ContatoBean {
 			return false;
 		if (mensagem == null || "".equals(mensagem))
 			return false;
-		if (departamentoSelecionado == null
-				|| "".equals(departamentoSelecionado))
-			return false;
 		/* Se tudo deu certo */
 		return true;
 	}
@@ -67,7 +58,6 @@ public class ContatoBean {
 		setNome("");
 		setEmail("");
 		setAssunto("");
-		setDepartamentoSelecionado("");
 		setMensagem("");
 	}
 
@@ -103,11 +93,11 @@ public class ContatoBean {
 		this.mensagem = mensagem;
 	}
 
-	public String getDepartamentoSelecionado() {
-		return departamentoSelecionado;
-	}
-
-	public void setDepartamentoSelecionado(String departamentoSelecionado) {
-		this.departamentoSelecionado = departamentoSelecionado;
-	}
+//	public String getDepartamentoSelecionado() {
+//		return departamentoSelecionado;
+//	}
+//
+//	public void setDepartamentoSelecionado(String departamentoSelecionado) {
+//		this.departamentoSelecionado = departamentoSelecionado;
+//	}
 }

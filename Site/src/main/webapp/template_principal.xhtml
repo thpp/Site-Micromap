@@ -141,8 +141,20 @@
 									Mais</a>
 							</p>
 						</div>
-						<div class="widget span3"></div>
-						<div class="widget span3"></div>
+						<!-- 						<div class="widget span3"></div> -->
+						<div class="widget span3">
+							<h4>Regiões em que atendemos</h4>
+							<ul>
+								<li>Avaré</li>
+								<li>Assis</li>
+								<li>Bauru</li>
+								<li>Botucatu</li>
+								<li>Jaú</li>
+								<li>Marília</li>
+								<li>Ourinhos</li>
+							</ul>
+
+						</div>
 						<div class="widget span3">
 							<h4>Contato</h4>
 							<p>
@@ -178,6 +190,23 @@
 				action="#{MBTemplate.irParaEmpresa}" />
 		</h:form>
 	</ui:insert>
+	<!-- Google Analytics -->
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-78691776-2', 'auto');
+		ga('send', 'pageview');
+	</script>
 
 </h:body>
 

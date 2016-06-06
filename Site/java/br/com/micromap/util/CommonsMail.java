@@ -25,30 +25,24 @@ public class CommonsMail {
 		properties.put("mail.smtp.host", "mail.micromap.com.br");
 		properties.put("mail.smtp.port", "587");
 		properties.put("mail.smtp.auth", "true");
-		session = Session.getInstance(properties,
-				new javax.mail.Authenticator() {
-					@Override
-					protected PasswordAuthentication getPasswordAuthentication() {
-						return new PasswordAuthentication(
-								"contato@micromap.com.br", "oramap82");
-					}
-				});
+		session = Session.getInstance(properties, new javax.mail.Authenticator() {
+			@Override
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication("contato@micromap.com.br", "oramap82");
+			}
+		});
 	}
 
-	public void enviarEmail(String nomeRemetente, String emailRemetente,
-			String assuntoRemetente, String departamentoRemetente,
+	public void enviarEmail(String nomeRemetente, String emailRemetente, String assuntoRemetente,
 			String mensagemRemetente) throws Exception {
 
 		MimeMessage message = new MimeMessage(session);
 		message.setSentDate(new Date());
 		message.setFrom(new InternetAddress(emailRemetente));
-		message.addRecipient(Message.RecipientType.TO, new InternetAddress(
-				"contato@micromap.com.br"));
+		message.addRecipient(Message.RecipientType.TO, new InternetAddress("contato@micromap.com.br"));
 		message.setSubject(assuntoRemetente);
-		message.setText("Nome do Remetente: " + nomeRemetente
-				+ "\nEmail do Remetente: " + emailRemetente
-				+ "\nDepartamento: " + departamentoRemetente + "\nAssunto: "
-				+ assuntoRemetente + "\nMensagem: " + mensagemRemetente);
+		message.setText("Nome do Remetente: " + nomeRemetente + "\nEmail do Remetente: " + emailRemetente
+				+ "\nAssunto: " + assuntoRemetente + "\nMensagem: " + mensagemRemetente);
 		Transport.send(message);
 	}
 

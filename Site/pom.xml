@@ -11,7 +11,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<repositories>
 		<!-- Alfred Library -->
 		<repository>
@@ -25,7 +25,7 @@
 			<url>http://alfredlibrary.googlecode.com/svn/repository/release </url>
 		</repository>
 	</repositories>
-	
+
 	<!-- Dependências -->
 	<dependencies>
 
@@ -35,14 +35,20 @@
 			<artifactId>javax.faces</artifactId>
 			<version>2.2.10</version>
 		</dependency>
-		
+
 		<!-- PrimeFaces -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.primefaces</groupId> -->
+		<!-- <artifactId>primefaces</artifactId> -->
+		<!-- <version>5.2.7</version> -->
+		<!-- </dependency> -->
+		
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
-			<version>5.2.7</version>
-		</dependency>		
-		
+			<version>5.2</version>
+		</dependency>
+
 		<!-- PrimeFaces Extensions -->
 		<dependency>
 			<groupId>org.primefaces.extensions</groupId>
@@ -88,7 +94,7 @@
 			<artifactId>rewrite-config-prettyfaces</artifactId>
 			<version>2.0.12.Final</version>
 		</dependency>
-		
+
 		<!-- Validadores Diversos -->
 		<dependency>
 			<artifactId>alfred</artifactId>
