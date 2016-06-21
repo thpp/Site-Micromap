@@ -39,5 +39,10 @@
 		<pattern value="/entre_em_contato" />
 		<view-id value="/contato.xhtml" />
 	</url-mapping>
+	
+	<url-mapping id="instaladores">
+		<pattern value="/instaladores" />
+		<view-id value="/instaladores.xhtml" />
+	</url-mapping>
 
 </pretty-config>                      
