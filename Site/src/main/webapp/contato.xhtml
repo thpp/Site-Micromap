@@ -9,6 +9,28 @@
 
 <h:body>
 
+	<!-- Google Code for Captura de Email Conversion Page -->
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 879547502;
+		var google_conversion_language = "en";
+		var google_conversion_format = "3";
+		var google_conversion_color = "ffffff";
+		var google_conversion_label = "xq3MCJXo4GcQ7qizowM";
+		var google_remarketing_only = false;
+		/* ]]> */
+	</script>
+	<script type="text/javascript"
+		src="//www.googleadservices.com/pagead/conversion.js">
+		
+	</script>
+	<noscript>
+		<div style="display: inline;">
+			<img height="1" width="1" style="border-style: none;" alt=""
+				src="//www.googleadservices.com/pagead/conversion/879547502/?label=xq3MCJXo4GcQ7qizowM;guid=ON;script=0" />
+		</div>
+	</noscript>
+
 	<ui:composition template="template_principal.xhtml">
 
 		<ui:define name="content">
@@ -35,22 +57,22 @@
 						<h:form id="frmContato">
 							<h:panelGroup id="pnlContato">
 								<label>Nome *</label>
-								<h:inputText value="#{MBContato.nome}" maxlength="100"/>
+								<h:inputText value="#{MBContato.nome}" maxlength="100" />
 
 								<label>Email *</label>
-								<h:inputText value="#{MBContato.email}" maxlength="50"/>
-								
+								<h:inputText value="#{MBContato.email}" maxlength="50" />
+
 								<label>Assunto *</label>
-								<h:inputText value="#{MBContato.assunto}" maxlength="60"/>
+								<h:inputText value="#{MBContato.assunto}" maxlength="60" />
 
 								<label>Mensagem *</label>
 								<h:inputTextarea style="resize: none;"
-									value="#{MBContato.mensagem}" rows="8"/>
+									value="#{MBContato.mensagem}" rows="8" />
 
 								<h:commandButton class="botaoEnviar" value="Enviar"
 									style="font-weight: bolder; width: 15em; float: left; height: 2.5em; "
 									actionListener="#{MBContato.enviarEmail}" />
-									
+
 							</h:panelGroup>
 						</h:form>
 					</div>
@@ -80,9 +102,11 @@
 					value="Erro ao enviar email. Tente novamente mais tarde."
 					style="color: red; font-weight: bold;" />
 			</p:dialog>
+
 		</ui:define>
 
 	</ui:composition>
+
 </h:body>
 
 </html>

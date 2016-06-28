@@ -42,7 +42,7 @@
 		<!-- <artifactId>primefaces</artifactId> -->
 		<!-- <version>5.2.7</version> -->
 		<!-- </dependency> -->
-		
+
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
@@ -74,6 +74,12 @@
 			<version>1.4.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
 		<!-- Framework de Componentes e Funções -->
 		<dependency>
 			<groupId>org.omnifaces</groupId>
@@ -87,6 +93,14 @@
 			<artifactId>rewrite-servlet</artifactId>
 			<version>2.0.12.Final</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+
 
 		<!-- Pretty Faces -->
 		<dependency>
