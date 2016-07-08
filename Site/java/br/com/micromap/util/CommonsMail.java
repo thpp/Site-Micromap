@@ -17,18 +17,19 @@ public class CommonsMail {
 	private Session session;
 
 	public CommonsMail() throws IOException {
-		this.getConfigurationIntegrator();
+		this.getConfiguration();
 	}
 
-	public void getConfigurationIntegrator() {
+	public void getConfiguration() {
 		properties = new Properties();
-		properties.put("mail.smtp.host", "mail.micromap.com.br");
+		properties.put("mail.transport.protocol", "smtp");
+		properties.put("mail.smtp.host", "smtplw.com.br");
 		properties.put("mail.smtp.port", "587");
 		properties.put("mail.smtp.auth", "true");
 		session = Session.getInstance(properties, new javax.mail.Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("contato@micromap.com.br", "oramap82");
+				return new PasswordAuthentication("micromapweb", "iujlncXA9161");
 			}
 		});
 	}
@@ -38,11 +39,12 @@ public class CommonsMail {
 
 		MimeMessage message = new MimeMessage(session);
 		message.setSentDate(new Date());
-		message.setFrom(new InternetAddress(emailRemetente));
+		message.setFrom(new InternetAddress("contato@micromap.com.br"));
 		message.addRecipient(Message.RecipientType.TO, new InternetAddress("contato@micromap.com.br"));
 		message.setSubject(assuntoRemetente);
 		message.setText("Nome do Remetente: " + nomeRemetente + "\nEmail do Remetente: " + emailRemetente
 				+ "\nAssunto: " + assuntoRemetente + "\nMensagem: " + mensagemRemetente);
+		
 		Transport.send(message);
 	}
 
